@@ -35,13 +35,35 @@
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日共抢：" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbA-Hg-Ew8">
+                    <rect key="frame" x="121.5" y="40" width="132" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="IO7-Vn-zCl"/>
+                        <constraint firstAttribute="height" constant="32" id="cNH-Gh-SYW"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="每日随机10随机万红包，看视频得红包，先抢先得，还不赶快行动！" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3X-cS-tEW">
+                    <rect key="frame" x="66" y="80" width="243" height="36"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="a3X-cS-tEW" secondAttribute="trailing" constant="66" id="1kC-ts-5oX"/>
+                <constraint firstItem="a3X-cS-tEW" firstAttribute="top" secondItem="dbA-Hg-Ew8" secondAttribute="bottom" constant="8" id="1vn-n7-aDl"/>
                 <constraint firstItem="yND-NV-ECs" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="140" id="2QR-Di-UdB"/>
                 <constraint firstItem="31P-nM-9rS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="4A2-Jb-1c5"/>
+                <constraint firstItem="a3X-cS-tEW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="66" id="9j7-c0-OpT"/>
                 <constraint firstItem="yND-NV-ECs" firstAttribute="centerX" secondItem="31P-nM-9rS" secondAttribute="centerX" id="H7j-08-YE0"/>
                 <constraint firstItem="31P-nM-9rS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Kba-iu-kqg"/>
+                <constraint firstItem="a3X-cS-tEW" firstAttribute="centerX" secondItem="31P-nM-9rS" secondAttribute="centerX" id="aE8-pb-Een"/>
+                <constraint firstItem="dbA-Hg-Ew8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="duI-fp-Jw9"/>
+                <constraint firstItem="dbA-Hg-Ew8" firstAttribute="centerX" secondItem="31P-nM-9rS" secondAttribute="centerX" id="j3X-84-0oa"/>
                 <constraint firstAttribute="bottom" secondItem="31P-nM-9rS" secondAttribute="bottom" id="kCv-Tr-vN5"/>
                 <constraint firstAttribute="trailing" secondItem="31P-nM-9rS" secondAttribute="trailing" id="lcI-cA-bFm"/>
             </constraints>

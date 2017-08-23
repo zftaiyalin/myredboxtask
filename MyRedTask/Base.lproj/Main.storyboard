@@ -53,29 +53,40 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4q-j6-7Zd">
-                                <rect key="frame" x="164" y="338" width="46" height="30"/>
+                                <rect key="frame" x="33" y="379" width="308" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frS-JF-3h9">
-                                <rect key="frame" x="165" y="390" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="frS-JF-3h9">
+                                <rect key="frame" x="34" y="434" width="308" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="玩游戏得红包"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ig-UU-HEB">
-                                <rect key="frame" x="165" y="447" width="46" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="每观看一次视频可获取1到100的等值积分红包" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hj-nJ-x0Q">
+                                <rect key="frame" x="128" y="300" width="120" height="50.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="sRk-WB-2GF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Ig-UU-HEB">
+                                <rect key="frame" x="34" y="488" width="308" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="红包提取"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="2F4-KW-D5j" firstAttribute="centerX" secondItem="pUQ-pG-CYl" secondAttribute="centerX" id="4iD-WV-fb0"/>
+                            <constraint firstItem="8hj-nJ-x0Q" firstAttribute="top" secondItem="2F4-KW-D5j" secondAttribute="bottom" constant="20" id="Bts-uk-VRe"/>
                             <constraint firstItem="pUQ-pG-CYl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="C3c-dg-IM8"/>
                             <constraint firstItem="pUQ-pG-CYl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Dii-jK-YMX"/>
                             <constraint firstItem="FyU-yg-F6a" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="E3a-cW-12g"/>
                             <constraint firstItem="FyU-yg-F6a" firstAttribute="centerX" secondItem="pUQ-pG-CYl" secondAttribute="centerX" id="EVl-L5-Edv"/>
                             <constraint firstItem="FyU-yg-F6a" firstAttribute="top" secondItem="DWJ-iO-HGn" secondAttribute="bottom" constant="12" id="I0b-Vk-lIY"/>
+                            <constraint firstItem="8hj-nJ-x0Q" firstAttribute="centerX" secondItem="pUQ-pG-CYl" secondAttribute="centerX" id="QmC-0q-sOt"/>
                             <constraint firstItem="DWJ-iO-HGn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="Y8t-Hf-HoY"/>
                             <constraint firstItem="DWJ-iO-HGn" firstAttribute="centerX" secondItem="pUQ-pG-CYl" secondAttribute="centerX" id="ihM-Yy-SMu"/>
                             <constraint firstItem="2F4-KW-D5j" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="140" id="plj-aQ-nQf"/>
