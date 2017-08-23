@@ -13,6 +13,9 @@
 		6B7DFF841F4D1801002CA103 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B7DFF831F4D1801002CA103 /* Assets.xcassets */; };
 		6B7DFF871F4D1801002CA103 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B7DFF851F4D1801002CA103 /* LaunchScreen.storyboard */; };
 		6B7DFF921F4D1801002CA103 /* MyRedTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7DFF911F4D1801002CA103 /* MyRedTaskUITests.swift */; };
+		6BA510791F4D1F320054ECA6 /* IMG_0504.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 6BA510781F4D1F320054ECA6 /* IMG_0504.JPG */; };
+		6BA510801F4D23F70054ECA6 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA5107E1F4D23F70054ECA6 /* FirstViewController.swift */; };
+		6BA510811F4D23F70054ECA6 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BA5107F1F4D23F70054ECA6 /* FirstViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		6B7DFF8D1F4D1801002CA103 /* MyRedTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyRedTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B7DFF911F4D1801002CA103 /* MyRedTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRedTaskUITests.swift; sourceTree = "<group>"; };
 		6B7DFF931F4D1801002CA103 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6BA510781F4D1F320054ECA6 /* IMG_0504.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0504.JPG; sourceTree = "<group>"; };
+		6BA5107E1F4D23F70054ECA6 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		6BA5107F1F4D23F70054ECA6 /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +85,10 @@
 			children = (
 				6B7DFF7C1F4D1801002CA103 /* AppDelegate.swift */,
 				6B7DFF7E1F4D1801002CA103 /* ViewController.swift */,
+				6BA5107E1F4D23F70054ECA6 /* FirstViewController.swift */,
+				6BA5107F1F4D23F70054ECA6 /* FirstViewController.xib */,
 				6B7DFF801F4D1801002CA103 /* Main.storyboard */,
+				6BA510781F4D1F320054ECA6 /* IMG_0504.JPG */,
 				6B7DFF831F4D1801002CA103 /* Assets.xcassets */,
 				6B7DFF851F4D1801002CA103 /* LaunchScreen.storyboard */,
 				6B7DFF881F4D1801002CA103 /* Info.plist */,
@@ -181,6 +190,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BA510791F4D1F320054ECA6 /* IMG_0504.JPG in Resources */,
+				6BA510811F4D23F70054ECA6 /* FirstViewController.xib in Resources */,
 				6B7DFF871F4D1801002CA103 /* LaunchScreen.storyboard in Resources */,
 				6B7DFF841F4D1801002CA103 /* Assets.xcassets in Resources */,
 				6B7DFF821F4D1801002CA103 /* Main.storyboard in Resources */,
@@ -201,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BA510801F4D23F70054ECA6 /* FirstViewController.swift in Sources */,
 				6B7DFF7F1F4D1801002CA103 /* ViewController.swift in Sources */,
 				6B7DFF7D1F4D1801002CA103 /* AppDelegate.swift in Sources */,
 			);
@@ -410,6 +422,7 @@
 				6B7DFF981F4D1801002CA103 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6B7DFF991F4D1801002CA103 /* Build configuration list for PBXNativeTarget "MyRedTaskUITests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +431,7 @@
 				6B7DFF9B1F4D1801002CA103 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
