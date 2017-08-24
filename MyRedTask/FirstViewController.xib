@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstViewController">
             <connections>
+                <outlet property="bannerView" destination="LM3-di-Cmi" id="d3G-jT-q2M"/>
                 <outlet property="mainButton" destination="yND-NV-ECs" id="lgd-HV-dnE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -85,6 +86,13 @@
                     </constraints>
                     <state key="normal" title="提取红包"/>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LM3-di-Cmi" customClass="GADBannerView">
+                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Ryg-FC-Cph"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -92,11 +100,13 @@
                 <constraint firstAttribute="trailing" secondItem="a3X-cS-tEW" secondAttribute="trailing" constant="66" id="1kC-ts-5oX"/>
                 <constraint firstItem="a3X-cS-tEW" firstAttribute="top" secondItem="dbA-Hg-Ew8" secondAttribute="bottom" constant="8" id="1vn-n7-aDl"/>
                 <constraint firstItem="yND-NV-ECs" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="140" id="2QR-Di-UdB"/>
+                <constraint firstItem="LM3-di-Cmi" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3ml-RI-3Wx"/>
                 <constraint firstItem="31P-nM-9rS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="4A2-Jb-1c5"/>
                 <constraint firstItem="a3X-cS-tEW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="66" id="9j7-c0-OpT"/>
                 <constraint firstItem="npA-nB-6VT" firstAttribute="top" secondItem="hp0-33-Dlg" secondAttribute="bottom" constant="70" id="BZi-aD-IrE"/>
                 <constraint firstAttribute="trailing" secondItem="ItT-5G-HB6" secondAttribute="trailing" constant="40" id="G6m-iF-rbg"/>
                 <constraint firstItem="yND-NV-ECs" firstAttribute="centerX" secondItem="31P-nM-9rS" secondAttribute="centerX" id="H7j-08-YE0"/>
+                <constraint firstAttribute="trailing" secondItem="LM3-di-Cmi" secondAttribute="trailing" id="I8g-od-RoW"/>
                 <constraint firstItem="31P-nM-9rS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Kba-iu-kqg"/>
                 <constraint firstItem="YWC-42-nmL" firstAttribute="top" secondItem="ItT-5G-HB6" secondAttribute="bottom" constant="10" id="ODG-A5-xQw"/>
                 <constraint firstItem="ItT-5G-HB6" firstAttribute="top" secondItem="npA-nB-6VT" secondAttribute="bottom" constant="10" id="PsI-O0-A6X"/>
@@ -106,6 +116,7 @@
                 <constraint firstItem="dbA-Hg-Ew8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="40" id="duI-fp-Jw9"/>
                 <constraint firstItem="npA-nB-6VT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="ejm-2m-m3A"/>
                 <constraint firstAttribute="trailing" secondItem="npA-nB-6VT" secondAttribute="trailing" constant="40" id="hlb-8G-xCz"/>
+                <constraint firstAttribute="bottom" secondItem="LM3-di-Cmi" secondAttribute="bottom" id="iz2-BE-QNi"/>
                 <constraint firstItem="dbA-Hg-Ew8" firstAttribute="centerX" secondItem="31P-nM-9rS" secondAttribute="centerX" id="j3X-84-0oa"/>
                 <constraint firstAttribute="bottom" secondItem="31P-nM-9rS" secondAttribute="bottom" id="kCv-Tr-vN5"/>
                 <constraint firstItem="npA-nB-6VT" firstAttribute="centerX" secondItem="31P-nM-9rS" secondAttribute="centerX" id="lT7-7s-SMz"/>
