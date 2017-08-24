@@ -1,0 +1,56 @@
+PODS:
+  - Firebase/AdMob (4.0.4):
+    - Firebase/Core
+    - Google-Mobile-Ads-SDK (= 7.21.0)
+  - Firebase/Core (4.0.4):
+    - FirebaseAnalytics (= 4.0.2)
+    - FirebaseCore (= 4.0.4)
+  - FirebaseAnalytics (4.0.2):
+    - FirebaseCore (~> 4.0)
+    - FirebaseInstanceID (~> 2.0)
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseCore (4.0.4):
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+    - nanopb (~> 0.3)
+  - FirebaseInstanceID (2.0.0):
+    - FirebaseCore (~> 4.0)
+  - Google-Mobile-Ads-SDK (7.21.0)
+  - GoogleToolboxForMac/Defines (2.1.1)
+  - GoogleToolboxForMac/NSData+zlib (2.1.1):
+    - GoogleToolboxForMac/Defines (= 2.1.1)
+  - nanopb (0.3.8):
+    - nanopb/decode (= 0.3.8)
+    - nanopb/encode (= 0.3.8)
+  - nanopb/decode (0.3.8)
+  - nanopb/encode (0.3.8)
+  - SVProgressHUD (2.1.2)
+  - UMengAnalytics (4.2.4)
+  - YYCategories (1.0.4):
+    - YYCategories/no-arc (= 1.0.4)
+  - YYCategories/no-arc (1.0.4)
+  - YYModel (1.0.4)
+
+DEPENDENCIES:
+  - Firebase/AdMob
+  - Firebase/Core
+  - SVProgressHUD
+  - UMengAnalytics
+  - YYCategories
+  - YYModel
+
+SPEC CHECKSUMS:
+  Firebase: 1492bf04e1b73a7353b4fb2cf5a20bac9692f341
+  FirebaseAnalytics: ad41720e3e67fc63fbe3d2948d3e26932a8de311
+  FirebaseCore: cfc042628ef9f20debe09c0eb683135fcd404cb4
+  FirebaseInstanceID: 9fbf536668f4d3f0880e7438456dabd1376e294b
+  Google-Mobile-Ads-SDK: 4a6f1b43c8cc0e1e95a3b59d9f52a01671c6f9f3
+  GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
+  nanopb: 22bc080fa3955e2116b6ff3ee6c2cb3c15ab97cb
+  SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  UMengAnalytics: ef8d45f94c0e5771dc364cf6a5731d9d3b101da2
+  YYCategories: 6bcd4314c6661a561410dce4a793379ebd306abd
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+
+PODFILE CHECKSUM: aac08ef484497c760ab66ab5ecee91f898d1ae72
+
+COCOAPODS: 1.2.0

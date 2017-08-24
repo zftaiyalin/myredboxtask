@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class FirstViewController: UIViewController {
 
@@ -19,6 +20,7 @@ class FirstViewController: UIViewController {
         mainButton.layer.borderColor = UIColor.white.cgColor
         mainButton.layer.borderWidth = 5
         mainButton.layer.cornerRadius = 60
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,6 +28,11 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.isNavigationBarHidden = true
+    }
 
     /*
     // MARK: - Navigation
@@ -36,5 +43,7 @@ class FirstViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    @IBAction func tapQiang(_ sender: Any) {
+    }
 
 }
