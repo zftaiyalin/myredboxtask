@@ -7,14 +7,16 @@
 //
 
 #import "NSObject+ALiHUD.h"
-#import <SVProgressHUD.h>
+#import "SVProgressHUD.h"
 #import "ALiProgressHUD.h"
 
 @implementation NSObject (ALiHUD)
 
 - (void)showText:(NSString *)aText
 {
+    [ALiProgressHUD setForegroundColor:[UIColor whiteColor]];
     [ALiProgressHUD showWithStatus:aText];
+    
 }
 
 

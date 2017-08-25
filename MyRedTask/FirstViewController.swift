@@ -29,6 +29,10 @@ class FirstViewController: UIViewController {
         let request: GADRequest = GADRequest()
         request.testDevices = [""]
         bannerView.load(request)
+        
+        GADRewardBasedVideoAd.sharedInstance().delegate = self
+        
+        self.requestRewardedVideo()
     }
 
     override func didReceiveMemoryWarning() {
@@ -58,10 +62,24 @@ class FirstViewController: UIViewController {
         if GADRewardBasedVideoAd.sharedInstance().isReady {
             GADRewardBasedVideoAd.sharedInstance().present(fromRootViewController: self)
         }else{
+            self.showText("正在获取红包视频...")
             self.requestRewardedVideo()
         }
     }
+    @IBAction func pushMyMoney(_ sender: Any) {
+        self.navigationController?.pushViewController(MyMoneyViewController(), animated: true)
+    }
+    @IBOutlet weak var pushRedBox: UIButton!
 
+    @IBAction func shareGame(_ sender: Any) {
+    }
+    @IBAction func pushGame(_ sender: Any) {
+        
+        let mainStoryboard = UIStoryboard.init(name: "Main", bundle: nil)
+        //将取出的storyboard里面的控制器被所需的控制器指着。
+        let vc = mainStoryboard.instantiateViewController(withIdentifier: "StickHeroBoard")
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
     
     func requestRewardedVideo() {
         GADRewardBasedVideoAd.sharedInstance().load(GADRequest()
@@ -80,6 +98,13 @@ extension FirstViewController:GADRewardBasedVideoAdDelegate{
     
     func rewardBasedVideoAdDidReceive(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
 //        NSLog(@"Reward based video ad is received.");
+        self.dismissLoading()
+        if GADRewardBasedVideoAd.sharedInstance().isReady {
+            GADRewardBasedVideoAd.sharedInstance().present(fromRootViewController: self)
+        }else{
+            self.showText("正在获取红包视频...")
+            self.requestRewardedVideo()
+        }
     }
     func rewardBasedVideoAdDidStartPlaying(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
 //        NSLog(@"admob奖励视频开始播放");
@@ -88,6 +113,16 @@ extension FirstViewController:GADRewardBasedVideoAdDelegate{
     func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didFailToLoadWithError error: Error) {
 //        NSLog(@"Reward based video ad failed to load.");
 //        NSLog(@"admob奖励视频加载失败");
+        
+        let money = MoneyModel()
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let currentDateString = dateFormatter.string(from: Date.init())
+        money.time = currentDateString
+        money.price = Double(Aplication.sharedInstance.backSuijiMoney())
+        
+        Aplication.sharedInstance.myMoneyList.append(money)
     }
     
     func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didRewardUserWith reward: GADAdReward) {

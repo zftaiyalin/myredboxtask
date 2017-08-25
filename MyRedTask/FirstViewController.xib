@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="bannerView" destination="LM3-di-Cmi" id="d3G-jT-q2M"/>
                 <outlet property="mainButton" destination="yND-NV-ECs" id="lgd-HV-dnE"/>
+                <outlet property="pushRedBox" destination="YWC-42-nmL" id="VWP-PU-HiA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -71,6 +72,9 @@
                         <constraint firstAttribute="height" constant="40" id="Spu-2i-e2r"/>
                     </constraints>
                     <state key="normal" title="分享得红包"/>
+                    <connections>
+                        <action selector="shareGame:" destination="-1" eventType="touchUpInside" id="Vj5-HT-2Zv"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ItT-5G-HB6">
                     <rect key="frame" x="40" y="456" width="295" height="40"/>
@@ -78,6 +82,9 @@
                         <constraint firstAttribute="height" constant="40" id="p0d-vH-ZQh"/>
                     </constraints>
                     <state key="normal" title="玩游戏得红包"/>
+                    <connections>
+                        <action selector="pushGame:" destination="-1" eventType="touchUpInside" id="LeI-bC-dtC"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YWC-42-nmL">
                     <rect key="frame" x="40" y="506" width="295" height="40"/>
@@ -85,12 +92,15 @@
                         <constraint firstAttribute="height" constant="40" id="cJn-V5-qGW"/>
                     </constraints>
                     <state key="normal" title="提取红包"/>
+                    <connections>
+                        <action selector="pushMyMoney:" destination="-1" eventType="touchUpInside" id="Ej2-2X-9BC"/>
+                    </connections>
                 </button>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LM3-di-Cmi" customClass="GADBannerView">
-                    <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                    <rect key="frame" x="0.0" y="603" width="375" height="64"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="44" id="Ryg-FC-Cph"/>
+                        <constraint firstAttribute="height" constant="64" id="Ryg-FC-Cph"/>
                     </constraints>
                 </view>
             </subviews>
