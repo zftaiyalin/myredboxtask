@@ -11,13 +11,16 @@ import GoogleMobileAds
 
 class FirstViewController: UIViewController {
 
+    @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var mainButton: UIButton!
+    
+    var isReward = false
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = "抢红包"
         // Do any additional setup after loading the view.
-        
+    
         mainButton.layer.borderColor = UIColor.white.cgColor
         mainButton.layer.borderWidth = 5
         mainButton.layer.cornerRadius = 60
@@ -32,7 +35,9 @@ class FirstViewController: UIViewController {
         
         GADRewardBasedVideoAd.sharedInstance().delegate = self
         
-        self.requestRewardedVideo()
+//        self.requestRewardedVideo()
+        
+        priceLabel.text = "今日共抢：￥ \(Aplication.sharedInstance.myAllTodayPrice())"
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,8 +49,43 @@ class FirstViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
+        
+        
+        
+      
     }
-
+    
+    func openReward() {
+        
+        let queue = DispatchQueue.global(qos: .default)
+        
+        queue.async(execute: {
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+            let currentDateString = dateFormatter.string(from: Date())
+            
+            let money = MoneyModel.init(isTake: false, time: currentDateString, price: Double(Aplication.sharedInstance.backSuijiMoney()))
+            Aplication.sharedInstance.myMoneyList.append(money)
+            Aplication.sharedInstance.saveData()
+            let price = Aplication.sharedInstance.myAllTodayPrice()
+            
+            DispatchQueue.main.sync(execute: {
+                
+                 self.priceLabel.text = "今日共抢：￥ \(price)"
+            })
+        })
+    }
+    
+    func shareButtonPress() {
+        self.cancelButtonClicked()
+        if GADRewardBasedVideoAd.sharedInstance().isReady {
+            GADRewardBasedVideoAd.sharedInstance().present(fromRootViewController: self)
+        }else{
+            self.showText("正在获取红包视频...")
+            self.requestRewardedVideo()
+        }
+    }
     
 //    广告单元名称： 激励
 //    广告单元 ID： ca-app-pub-3676267735536366/8535443029
@@ -93,7 +133,20 @@ extension FirstViewController:GADRewardBasedVideoAdDelegate{
     }
     
     func rewardBasedVideoAdDidClose(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
-//        NSLog(@"中途关闭admob奖励视频");
+//        NSLog(@"关闭admob奖励视频");
+        
+        if isReward == true {
+            isReward = false
+            
+            let info = RewardInfo.init()
+            info.money         = Float((Aplication.sharedInstance.myMoneyList.last?.price)!)!;
+            info.rewardName    = "获得红包了！😊😊";
+            info.rewardContent = "恭喜你得到红包~";
+            info.rewardStatus  = 0;
+            
+            self.initRedPacketWindow(info)
+            
+        }
     }
     
     func rewardBasedVideoAdDidReceive(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
@@ -113,20 +166,16 @@ extension FirstViewController:GADRewardBasedVideoAdDelegate{
     func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didFailToLoadWithError error: Error) {
 //        NSLog(@"Reward based video ad failed to load.");
 //        NSLog(@"admob奖励视频加载失败");
-        
-        let money = MoneyModel()
-        
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-        let currentDateString = dateFormatter.string(from: Date.init())
-        money.time = currentDateString
-        money.price = Double(Aplication.sharedInstance.backSuijiMoney())
-        
-        Aplication.sharedInstance.myMoneyList.append(money)
+        self.showErrorText("视频加载失败")
+     
     }
     
     func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didRewardUserWith reward: GADAdReward) {
 //        NSLog(@"有效的播放admob奖励视频");
+  
+       
+        
+        isReward = true
     }
     
     func rewardBasedVideoAdWillLeaveApplication(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {

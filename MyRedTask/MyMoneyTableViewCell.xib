@@ -35,7 +35,7 @@
                             <constraint firstAttribute="height" constant="21" id="vMc-Y0-9hq"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                        <color key="textColor" red="0.0" green="0.74471080300000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="textColor" red="0.0" green="0.74509803921568629" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+ 27.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z2H-O0-DTc">
@@ -59,6 +59,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="duiLabel" destination="hXY-z8-ffy" id="O2n-Iq-BNc"/>
                 <outlet property="priceLabel" destination="Z2H-O0-DTc" id="vOK-r8-34A"/>
                 <outlet property="timeLabel" destination="JDh-xq-HBH" id="BHH-GE-Ody"/>
             </connections>

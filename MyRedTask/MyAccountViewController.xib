@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyAccountViewController" customModule="MyRedTask" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="weixin" destination="0NA-0M-taS" id="9Bo-yS-qos"/>
+                <outlet property="zhifubao" destination="XGI-fP-6o7" id="mGy-5e-W3d"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGI-fP-6o7">
+                    <rect key="frame" x="-2" y="84" width="379" height="44"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="i5V-W5-WYe"/>
+                    </constraints>
+                    <connections>
+                        <action selector="tapZhifu:" destination="-1" eventType="touchUpInside" id="Irh-ki-gzn"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="支付宝" translatesAutoresizingMaskIntoConstraints="NO" id="ToI-Yh-VRu">
+                    <rect key="frame" x="13" y="88.5" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="QF9-2S-2k7"/>
+                        <constraint firstAttribute="height" constant="35" id="aVm-og-qvS"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="支付宝" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PGB-1I-m5c">
+                    <rect key="frame" x="61" y="96" width="52" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="EpD-ZO-gBe"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0NA-0M-taS">
+                    <rect key="frame" x="-2" y="138" width="379" height="44"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="3iS-Xu-Hxf"/>
+                    </constraints>
+                    <connections>
+                        <action selector="tapWeixin:" destination="-1" eventType="touchUpInside" id="bKg-PE-95S"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="微信" translatesAutoresizingMaskIntoConstraints="NO" id="caR-lA-Q4z">
+                    <rect key="frame" x="13" y="143" width="35" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="mQx-wR-7Aw"/>
+                        <constraint firstAttribute="height" constant="35" id="zxd-iw-R9D"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="微信" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Piz-dN-0ae">
+                    <rect key="frame" x="61" y="150" width="35" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="WIG-ec-zuM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="0.9370916485786438" green="0.93694382905960083" blue="0.95754462480545044" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="XGI-fP-6o7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-2" id="Dcu-Ep-bWY"/>
+                <constraint firstItem="0NA-0M-taS" firstAttribute="top" secondItem="XGI-fP-6o7" secondAttribute="bottom" constant="10" id="Dnx-91-vou"/>
+                <constraint firstAttribute="trailing" secondItem="0NA-0M-taS" secondAttribute="trailing" constant="-2" id="GQo-e6-a8H"/>
+                <constraint firstItem="caR-lA-Q4z" firstAttribute="centerY" secondItem="0NA-0M-taS" secondAttribute="centerY" id="K0c-Fl-2h7"/>
+                <constraint firstItem="0NA-0M-taS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="-2" id="SoF-by-EaM"/>
+                <constraint firstItem="Piz-dN-0ae" firstAttribute="centerY" secondItem="0NA-0M-taS" secondAttribute="centerY" id="UQm-Xt-Mhq"/>
+                <constraint firstItem="XGI-fP-6o7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="84" id="UYd-PB-WtD"/>
+                <constraint firstItem="caR-lA-Q4z" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="13" id="hrH-Zt-NCN"/>
+                <constraint firstItem="ToI-Yh-VRu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="13" id="jTe-sh-Wne"/>
+                <constraint firstItem="PGB-1I-m5c" firstAttribute="centerY" secondItem="XGI-fP-6o7" secondAttribute="centerY" id="jg3-oX-jPz"/>
+                <constraint firstAttribute="trailing" secondItem="XGI-fP-6o7" secondAttribute="trailing" constant="-2" id="ppb-wz-LY5"/>
+                <constraint firstItem="PGB-1I-m5c" firstAttribute="leading" secondItem="ToI-Yh-VRu" secondAttribute="trailing" constant="13" id="tIY-IJ-YM9"/>
+                <constraint firstItem="ToI-Yh-VRu" firstAttribute="centerY" secondItem="XGI-fP-6o7" secondAttribute="centerY" id="urW-nS-vlT"/>
+                <constraint firstItem="Piz-dN-0ae" firstAttribute="leading" secondItem="caR-lA-Q4z" secondAttribute="trailing" constant="13" id="wTt-Ms-r7Y"/>
+            </constraints>
+            <point key="canvasLocation" x="33.5" y="72.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="微信" width="48" height="48"/>
+        <image name="支付宝" width="48" height="48"/>
+    </resources>
+</document>

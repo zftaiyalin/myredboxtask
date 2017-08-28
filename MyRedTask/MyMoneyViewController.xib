@@ -82,9 +82,12 @@
                         <constraint firstAttribute="width" constant="335" id="Edg-ve-Iu3"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                    <state key="normal" title="提取奖金">
+                    <state key="normal" title="提取红包">
                         <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                     </state>
+                    <connections>
+                        <action selector="tixian:" destination="-1" eventType="touchUpInside" id="9CX-fO-fqQ"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="utP-yl-ptY">
                     <rect key="frame" x="19.5" y="399" width="335" height="47"/>
@@ -94,9 +97,26 @@
                         <constraint firstAttribute="height" constant="47" id="zWK-JA-6Zy"/>
                     </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                    <state key="normal" title="继续赚钱">
+                    <state key="normal" title="继续抢红包">
                         <color key="titleColor" red="0.93709164860000005" green="0.93694382909999996" blue="0.95754462480000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
+                    <connections>
+                        <action selector="takeReward:" destination="-1" eventType="touchUpInside" id="LGh-06-HmE"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OKC-2u-2aj">
+                    <rect key="frame" x="18" y="526" width="339" height="51"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="339" id="X65-UB-V4t"/>
+                        <constraint firstAttribute="height" constant="51" id="hlO-Mg-m1Y"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <state key="normal" title="设置账户">
+                        <color key="titleColor" red="0.45770166277280311" green="0.45770166277280311" blue="0.45770166277280311" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="pushAccount:" destination="-1" eventType="touchUpInside" id="RDJ-3m-aST"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.9370916485786438" green="0.93694382905960083" blue="0.95754462480545044" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -108,7 +128,9 @@
                 <constraint firstItem="utP-yl-ptY" firstAttribute="top" secondItem="8sZ-Lz-TXo" secondAttribute="bottom" constant="44" id="REk-O3-YwS"/>
                 <constraint firstItem="cY3-kj-aIV" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="TH9-48-K5T"/>
                 <constraint firstItem="utP-yl-ptY" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="btA-17-E0j"/>
+                <constraint firstItem="OKC-2u-2aj" firstAttribute="top" secondItem="Cmu-rA-pgw" secondAttribute="bottom" constant="21" id="ddb-32-Kes"/>
                 <constraint firstItem="8sZ-Lz-TXo" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ffY-bm-nsg"/>
+                <constraint firstItem="OKC-2u-2aj" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="r9u-hc-jdy"/>
                 <constraint firstItem="8sZ-Lz-TXo" firstAttribute="top" secondItem="szB-lc-SGh" secondAttribute="bottom" constant="10" id="w15-na-dgH"/>
                 <constraint firstItem="cY3-kj-aIV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="129" id="wsg-Ld-wmC"/>
             </constraints>

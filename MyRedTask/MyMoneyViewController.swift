@@ -18,7 +18,7 @@ class MyMoneyViewController: UIViewController {
     @IBOutlet weak var MoneyButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "我的奖金"
+        self.title = "我的红包"
         self.navigationController?.navigationBar.barTintColor = UIColor.black
         
         self.navigationController?.navigationBar.tintColor = UIColor.white
@@ -26,7 +26,7 @@ class MyMoneyViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
 
         
-        self.navigationItem.setRightBarButton(UIBarButtonItem.init(title: "奖金明细", style: .done, target: self, action: #selector(pushTakeView)), animated: true)
+        self.navigationItem.setRightBarButton(UIBarButtonItem.init(title: "红包明细", style: .done, target: self, action: #selector(pushTakeView)), animated: true)
         
         self.OneYuan.layer.cornerRadius = 54
             
@@ -45,7 +45,7 @@ class MyMoneyViewController: UIViewController {
         
         MoneyButton.layer.borderWidth = 0.5
         
-        
+        priceLabel.text = "￥ \(Aplication.sharedInstance.myAllPrice())"
         // Do any additional setup after loading the view.
     }
     
@@ -61,13 +61,25 @@ class MyMoneyViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    @IBAction func tixian(_ sender: Any) {
+        
+        if Aplication.sharedInstance.myAllPrice() > 30 {
+            
+        }
+    }
     
+    @IBAction func pushAccount(_ sender: Any) {
+        self.navigationController?.pushViewController(MyAccountViewController(), animated: true)
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
     }
     
     
+    @IBAction func takeReward(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
 
     /*
     // MARK: - Navigation

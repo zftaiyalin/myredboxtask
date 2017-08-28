@@ -8,10 +8,29 @@
 
 import UIKit
 
-class MoneyModel: NSObject {
+class MoneyModel: NSObject, NSCoding {
     
     var isTake = false
     var time = ""
-    var price = 0.00
+    var price = ""
+    //构造方法
+    required init(isTake:Bool=false, time:String="", price:Double=0.0) {
+        self.isTake = isTake
+        self.time = time
+        self.price = "\(price)"
+    }
 
+    //从object解析回来
+    required init(coder decoder: NSCoder) {
+        self.isTake = decoder.decodeObject(forKey: "isTake") as? Bool ?? false
+        self.time = decoder.decodeObject(forKey: "time") as? String ?? ""
+        self.price = decoder.decodeObject(forKey: "price") as? String ?? ""
+    }
+    
+    //编码成object
+    func encode(with coder: NSCoder) {
+        coder.encode(isTake, forKey:"isTake")
+        coder.encode(time, forKey:"time")
+        coder.encode(price, forKey:"price")
+    }
 }

@@ -10,6 +10,7 @@ import UIKit
 
 class MyMoneyTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var duiLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     override func awakeFromNib() {
@@ -21,6 +22,18 @@ class MyMoneyTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func loadData(money: MoneyModel) {
+        self.priceLabel.text = "+ \(money.price)"
+        self.timeLabel.text = money.time
+        if money.isTake {
+            duiLabel.text = "已兑换"
+            duiLabel.textColor = UIColor.red
+        }else{
+            duiLabel.text = "未兑换"
+            duiLabel.textColor = UIColor.init(hexString: "#00BE00")
+        }
     }
     
 }
