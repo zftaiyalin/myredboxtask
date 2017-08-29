@@ -33,13 +33,13 @@ enum StickHeroGameSceneActionKey: String {
 }
 
 enum StickHeroGameSceneEffectAudioName: String {
-    case DeadAudioName = "dead.wav"
-    case StickGrowAudioName = "stick_grow_loop.wav"
-    case StickGrowOverAudioName = "kick.wav"
-    case StickFallAudioName = "fall.wav"
-    case StickTouchMidAudioName = "touch_mid.wav"
-    case VictoryAudioName = "victory.wav"
-    case HighScoreAudioName = "highScore.wav"
+    case DeadAudioName = "zftdead.wav"
+    case StickGrowAudioName = "zftstick_grow_loop.wav"
+    case StickGrowOverAudioName = "zftkick.wav"
+    case StickFallAudioName = "zftfall.wav"
+    case StickTouchMidAudioName = "zfttouch_mid.wav"
+    case VictoryAudioName = "zftvictory.wav"
+    case HighScoreAudioName = "zfthighScore.wav"
 }
 
 enum StickHeroGameSceneZposition: CGFloat {

@@ -13,13 +13,13 @@ class Aplication: NSObject {
         // 单例  全局的数据访问接口
     static let sharedInstance = Aplication()
     var myMoneyList: [MoneyModel]!
-    
+    var appModel: AppModel!
     override init() {
         super.init()
         print("沙盒文件夹路径：\(documentsDirectory())")
         print("数据文件路径：\(dataFilePath())")
         if myMoneyList == nil {
-            myMoneyList = [MoneyModel]()
+           self.loadData()
         }
     }
     
@@ -84,6 +84,14 @@ class Aplication: NSObject {
         return Float(allMoney)
     }
     
+    func setNoTake() {
+        for item in myMoneyList {
+            if !item.isTake {
+                item.isTake = true
+            }
+        }
+    }
+    
     func myAllTodayPrice() -> Float {
         
         self.loadData()
@@ -109,7 +117,7 @@ class Aplication: NSObject {
     }
     
     func backSuijiMoney() -> Float {
-        if self.myAllPrice() < 10.0 {
+        if self.myAllPrice() < Float(self.appModel.taskLevel.one) {
             let temp = Int(arc4random_uniform(100))+1
             
             if temp < 75 {
@@ -118,7 +126,7 @@ class Aplication: NSObject {
                 return 0.5
             }
             
-        }else if self.myAllPrice() < 15.0 {
+        }else if self.myAllPrice() < Float(self.appModel.taskLevel.two) {
            
             let temp = Int(arc4random_uniform(100))+1
             
@@ -129,18 +137,18 @@ class Aplication: NSObject {
             }
         
             
-        }else if self.myAllPrice() < 20.0 {
+        }else if self.myAllPrice() < Float(self.appModel.taskLevel.three) {
             
             let temp = Int(arc4random_uniform(100))+1
             
             if temp < 90 {
-                return 0.25
+                return 0.15
             }else{
-                return 0.5
+                return 0.3
             }
             
             
-        }else if self.myAllPrice() < 25.0 {
+        }else if self.myAllPrice() < Float(self.appModel.taskLevel.four) {
             
             let temp = Int(arc4random_uniform(100))+1
             
@@ -153,11 +161,11 @@ class Aplication: NSObject {
             
         }else {
             
-          if self.myAllPrice() < 26.0 {
+          if self.myAllPrice() < Float(self.appModel.taskLevel.five) {
                 return 0.1
                 
                 
-          }else if self.myAllPrice() < 27.0 {
+          }else if self.myAllPrice() < Float(self.appModel.taskLevel.six) {
             
             return 0.05
             

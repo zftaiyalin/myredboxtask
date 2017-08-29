@@ -14,7 +14,7 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var mainButton: UIButton!
-    
+    var currentPrice = 0.0
     var isReward = false
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,7 @@ class FirstViewController: UIViewController {
         mainButton.layer.cornerRadius = 60
 //        "ca-app-pub-3676267735536366/8592596428"
         
-        bannerView.adUnitID = "ca-app-pub-3676267735536366/4223695332"
+        bannerView.adUnitID = Aplication.sharedInstance.appModel.admob.admobBanr
         bannerView.rootViewController = self
 
         let request: GADRequest = GADRequest()
@@ -45,6 +45,10 @@ class FirstViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+
+    @IBAction func tapXiexi(_ sender: Any) {
+        self.navigationController?.pushViewController(WebViewController(), animated: true)
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -65,13 +69,14 @@ class FirstViewController: UIViewController {
             dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
             let currentDateString = dateFormatter.string(from: Date())
             
-            let money = MoneyModel.init(isTake: false, time: currentDateString, price: Double(Aplication.sharedInstance.backSuijiMoney()))
+            let money = MoneyModel.init(isTake: false, time: currentDateString, price: self.currentPrice)
             Aplication.sharedInstance.myMoneyList.append(money)
             Aplication.sharedInstance.saveData()
             let price = Aplication.sharedInstance.myAllTodayPrice()
             
             DispatchQueue.main.sync(execute: {
                 
+                 self.currentPrice = 0.0
                  self.priceLabel.text = "今日共抢：￥ \(price)"
             })
         })
@@ -123,7 +128,7 @@ class FirstViewController: UIViewController {
     
     func requestRewardedVideo() {
         GADRewardBasedVideoAd.sharedInstance().load(GADRequest()
-            , withAdUnitID: "ca-app-pub-3676267735536366/3810493335")
+            , withAdUnitID: Aplication.sharedInstance.appModel.admob.admobReVideo)
     }
 }
 
@@ -139,7 +144,8 @@ extension FirstViewController:GADRewardBasedVideoAdDelegate{
             isReward = false
             
             let info = RewardInfo.init()
-            info.money         = Float((Aplication.sharedInstance.myMoneyList.last?.price)!)!;
+            currentPrice = Double(Aplication.sharedInstance.backSuijiMoney())
+            info.money         = Float(currentPrice);
             info.rewardName    = "获得红包了！😊😊";
             info.rewardContent = "恭喜你得到红包~";
             info.rewardStatus  = 0;

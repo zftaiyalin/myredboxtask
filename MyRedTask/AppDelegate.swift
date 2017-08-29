@@ -17,6 +17,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyyMMddHHmmss"
+        let currentDateString = dateFormatter.string(from: Date.init())
+        let ss = "http://ovfte6tum.bkt.clouddn.com/myredtask.json?v=" + currentDateString
+        let xcfURL = URL.init(string: ss)
+        
+        var content:String!
+        do {
+            content = try String(contentsOf:xcfURL!)
+        }
+        catch let error {
+            // Error handling
+            print(error)
+        }
+        if content != nil {
+            let model = AppModel.yy_model(withJSON: content)
+            Aplication.sharedInstance.appModel = model
+        }
+        
+        
         let nvc = UINavigationController.init(rootViewController: FirstViewController())
         window?.rootViewController = nvc
         window?.makeKeyAndVisible()

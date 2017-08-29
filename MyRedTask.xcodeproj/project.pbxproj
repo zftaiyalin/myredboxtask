@@ -28,22 +28,28 @@
 		6B7DFF841F4D1801002CA103 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B7DFF831F4D1801002CA103 /* Assets.xcassets */; };
 		6B7DFF871F4D1801002CA103 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B7DFF851F4D1801002CA103 /* LaunchScreen.storyboard */; };
 		6B7DFF921F4D1801002CA103 /* MyRedTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7DFF911F4D1801002CA103 /* MyRedTaskUITests.swift */; };
+		6B8403A51F554E8300F6DAD0 /* stick_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B8403A41F554E8300F6DAD0 /* stick_background.jpg */; };
+		6B8403A81F555E9100F6DAD0 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8403A61F555E9100F6DAD0 /* WebViewController.swift */; };
+		6B8403A91F555E9100F6DAD0 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6B8403A71F555E9100F6DAD0 /* WebViewController.xib */; };
+		6B8403AD1F5565E000F6DAD0 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8403AC1F5565E000F6DAD0 /* ScrollViewController.swift */; };
+		6B8403B01F5571FC00F6DAD0 /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8403AF1F5571FC00F6DAD0 /* AppModel.m */; };
+		6B8403B31F55720E00F6DAD0 /* TaskLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8403B21F55720E00F6DAD0 /* TaskLevel.m */; };
+		6B8403B61F55721A00F6DAD0 /* Admob.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8403B51F55721A00F6DAD0 /* Admob.m */; };
 		6B8E67F81F4FBE8600187DBF /* button_retry_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B8E67E61F4FBE8600187DBF /* button_retry_down.png */; };
 		6B8E67F91F4FBE8600187DBF /* button_retry_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B8E67E71F4FBE8600187DBF /* button_retry_up.png */; };
 		6B8E67FA1F4FBE8600187DBF /* human1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B8E67E81F4FBE8600187DBF /* human1.png */; };
 		6B8E67FB1F4FBE8600187DBF /* human2.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B8E67E91F4FBE8600187DBF /* human2.png */; };
-		6B8E67FC1F4FBE8600187DBF /* stick_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6B8E67EA1F4FBE8600187DBF /* stick_background.jpg */; };
 		6B8E67FD1F4FBE8600187DBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B8E67EB1F4FBE8600187DBF /* Main.storyboard */; };
 		6B8E67FE1F4FBE8600187DBF /* StarExplosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6B8E67ED1F4FBE8600187DBF /* StarExplosion.sks */; };
 		6B8E67FF1F4FBE8600187DBF /* starParticle.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B8E67EE1F4FBE8600187DBF /* starParticle.png */; };
-		6B8E68001F4FBE8600187DBF /* bg_country.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B8E67F01F4FBE8600187DBF /* bg_country.mp3 */; };
-		6B8E68011F4FBE8600187DBF /* dead.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6B8E67F11F4FBE8600187DBF /* dead.wav */; };
-		6B8E68021F4FBE8600187DBF /* fall.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6B8E67F21F4FBE8600187DBF /* fall.wav */; };
-		6B8E68031F4FBE8600187DBF /* highScore.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6B8E67F31F4FBE8600187DBF /* highScore.wav */; };
-		6B8E68041F4FBE8600187DBF /* kick.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6B8E67F41F4FBE8600187DBF /* kick.wav */; };
-		6B8E68051F4FBE8600187DBF /* stick_grow_loop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6B8E67F51F4FBE8600187DBF /* stick_grow_loop.wav */; };
-		6B8E68061F4FBE8600187DBF /* touch_mid.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6B8E67F61F4FBE8600187DBF /* touch_mid.wav */; };
-		6B8E68071F4FBE8600187DBF /* victory.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6B8E67F71F4FBE8600187DBF /* victory.wav */; };
+		6B8E68001F4FBE8600187DBF /* zftbg_country.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B8E67F01F4FBE8600187DBF /* zftbg_country.mp3 */; };
+		6B8E68011F4FBE8600187DBF /* zftdead.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6B8E67F11F4FBE8600187DBF /* zftdead.wav */; };
+		6B8E68021F4FBE8600187DBF /* zftfall.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6B8E67F21F4FBE8600187DBF /* zftfall.wav */; };
+		6B8E68031F4FBE8600187DBF /* zfthighScore.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6B8E67F31F4FBE8600187DBF /* zfthighScore.wav */; };
+		6B8E68041F4FBE8600187DBF /* zftkick.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6B8E67F41F4FBE8600187DBF /* zftkick.wav */; };
+		6B8E68051F4FBE8600187DBF /* zftstick_grow_loop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6B8E67F51F4FBE8600187DBF /* zftstick_grow_loop.wav */; };
+		6B8E68061F4FBE8600187DBF /* zfttouch_mid.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6B8E67F61F4FBE8600187DBF /* zfttouch_mid.wav */; };
+		6B8E68071F4FBE8600187DBF /* zftvictory.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6B8E67F71F4FBE8600187DBF /* zftvictory.wav */; };
 		6B8E680C1F4FBE9700187DBF /* Defined.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8E68081F4FBE9700187DBF /* Defined.swift */; };
 		6B8E680D1F4FBE9700187DBF /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8E68091F4FBE9700187DBF /* GameViewController.swift */; };
 		6B8E680E1F4FBE9700187DBF /* StickHeroGameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8E680A1F4FBE9700187DBF /* StickHeroGameScene.swift */; };
@@ -103,22 +109,31 @@
 		6B7DFF8D1F4D1801002CA103 /* MyRedTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyRedTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B7DFF911F4D1801002CA103 /* MyRedTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRedTaskUITests.swift; sourceTree = "<group>"; };
 		6B7DFF931F4D1801002CA103 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B8403A41F554E8300F6DAD0 /* stick_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stick_background.jpg; sourceTree = "<group>"; };
+		6B8403A61F555E9100F6DAD0 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		6B8403A71F555E9100F6DAD0 /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
+		6B8403AC1F5565E000F6DAD0 /* ScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
+		6B8403AE1F5571FC00F6DAD0 /* AppModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppModel.h; sourceTree = "<group>"; };
+		6B8403AF1F5571FC00F6DAD0 /* AppModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppModel.m; sourceTree = "<group>"; };
+		6B8403B11F55720E00F6DAD0 /* TaskLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TaskLevel.h; sourceTree = "<group>"; };
+		6B8403B21F55720E00F6DAD0 /* TaskLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskLevel.m; sourceTree = "<group>"; };
+		6B8403B41F55721A00F6DAD0 /* Admob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Admob.h; sourceTree = "<group>"; };
+		6B8403B51F55721A00F6DAD0 /* Admob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Admob.m; sourceTree = "<group>"; };
 		6B8E67E61F4FBE8600187DBF /* button_retry_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_retry_down.png; sourceTree = "<group>"; };
 		6B8E67E71F4FBE8600187DBF /* button_retry_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_retry_up.png; sourceTree = "<group>"; };
 		6B8E67E81F4FBE8600187DBF /* human1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = human1.png; sourceTree = "<group>"; };
 		6B8E67E91F4FBE8600187DBF /* human2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = human2.png; sourceTree = "<group>"; };
-		6B8E67EA1F4FBE8600187DBF /* stick_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stick_background.jpg; sourceTree = "<group>"; };
 		6B8E67EB1F4FBE8600187DBF /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		6B8E67ED1F4FBE8600187DBF /* StarExplosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = StarExplosion.sks; sourceTree = "<group>"; };
 		6B8E67EE1F4FBE8600187DBF /* starParticle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = starParticle.png; sourceTree = "<group>"; };
-		6B8E67F01F4FBE8600187DBF /* bg_country.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bg_country.mp3; sourceTree = "<group>"; };
-		6B8E67F11F4FBE8600187DBF /* dead.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = dead.wav; sourceTree = "<group>"; };
-		6B8E67F21F4FBE8600187DBF /* fall.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = fall.wav; sourceTree = "<group>"; };
-		6B8E67F31F4FBE8600187DBF /* highScore.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = highScore.wav; sourceTree = "<group>"; };
-		6B8E67F41F4FBE8600187DBF /* kick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = kick.wav; sourceTree = "<group>"; };
-		6B8E67F51F4FBE8600187DBF /* stick_grow_loop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = stick_grow_loop.wav; sourceTree = "<group>"; };
-		6B8E67F61F4FBE8600187DBF /* touch_mid.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = touch_mid.wav; sourceTree = "<group>"; };
-		6B8E67F71F4FBE8600187DBF /* victory.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = victory.wav; sourceTree = "<group>"; };
+		6B8E67F01F4FBE8600187DBF /* zftbg_country.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = zftbg_country.mp3; sourceTree = "<group>"; };
+		6B8E67F11F4FBE8600187DBF /* zftdead.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = zftdead.wav; sourceTree = "<group>"; };
+		6B8E67F21F4FBE8600187DBF /* zftfall.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = zftfall.wav; sourceTree = "<group>"; };
+		6B8E67F31F4FBE8600187DBF /* zfthighScore.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = zfthighScore.wav; sourceTree = "<group>"; };
+		6B8E67F41F4FBE8600187DBF /* zftkick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = zftkick.wav; sourceTree = "<group>"; };
+		6B8E67F51F4FBE8600187DBF /* zftstick_grow_loop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = zftstick_grow_loop.wav; sourceTree = "<group>"; };
+		6B8E67F61F4FBE8600187DBF /* zfttouch_mid.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = zfttouch_mid.wav; sourceTree = "<group>"; };
+		6B8E67F71F4FBE8600187DBF /* zftvictory.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = zftvictory.wav; sourceTree = "<group>"; };
 		6B8E68081F4FBE9700187DBF /* Defined.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Defined.swift; sourceTree = "<group>"; };
 		6B8E68091F4FBE9700187DBF /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		6B8E680A1F4FBE9700187DBF /* StickHeroGameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickHeroGameScene.swift; sourceTree = "<group>"; };
@@ -220,10 +235,13 @@
 				6B8E67E41F4FBE8600187DBF /* Assets */,
 				6B2BF0841F4EDB18008AE662 /* ALiHUD */,
 				6B7DFF7C1F4D1801002CA103 /* AppDelegate.swift */,
+				6B8403AC1F5565E000F6DAD0 /* ScrollViewController.swift */,
 				6B8E68281F5026C300187DBF /* Aplication.swift */,
 				6B7DFF7E1F4D1801002CA103 /* ViewController.swift */,
 				6BA5107E1F4D23F70054ECA6 /* FirstViewController.swift */,
 				6BA5107F1F4D23F70054ECA6 /* FirstViewController.xib */,
+				6B8403A61F555E9100F6DAD0 /* WebViewController.swift */,
+				6B8403A71F555E9100F6DAD0 /* WebViewController.xib */,
 				6B8E68121F5014F200187DBF /* TakeMoneyViewController.swift */,
 				6B8E68131F5014F200187DBF /* TakeMoneyViewController.xib */,
 				6B8E68181F50167000187DBF /* MyMoneyViewController.swift */,
@@ -242,6 +260,12 @@
 				6B8E680B1F4FBE9700187DBF /* Tools.swift */,
 				6B1658AB1F53C80600B5EE0C /* OCTool.h */,
 				6B1658AC1F53C80600B5EE0C /* OCTool.m */,
+				6B8403AE1F5571FC00F6DAD0 /* AppModel.h */,
+				6B8403AF1F5571FC00F6DAD0 /* AppModel.m */,
+				6B8403B11F55720E00F6DAD0 /* TaskLevel.h */,
+				6B8403B21F55720E00F6DAD0 /* TaskLevel.m */,
+				6B8403B41F55721A00F6DAD0 /* Admob.h */,
+				6B8403B51F55721A00F6DAD0 /* Admob.m */,
 				6BA510781F4D1F320054ECA6 /* IMG_0504.JPG */,
 				6B7DFF831F4D1801002CA103 /* Assets.xcassets */,
 				6B7DFF851F4D1801002CA103 /* LaunchScreen.storyboard */,
@@ -277,7 +301,7 @@
 				6B8E67E71F4FBE8600187DBF /* button_retry_up.png */,
 				6B8E67E81F4FBE8600187DBF /* human1.png */,
 				6B8E67E91F4FBE8600187DBF /* human2.png */,
-				6B8E67EA1F4FBE8600187DBF /* stick_background.jpg */,
+				6B8403A41F554E8300F6DAD0 /* stick_background.jpg */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -294,14 +318,14 @@
 		6B8E67EF1F4FBE8600187DBF /* Sound */ = {
 			isa = PBXGroup;
 			children = (
-				6B8E67F01F4FBE8600187DBF /* bg_country.mp3 */,
-				6B8E67F11F4FBE8600187DBF /* dead.wav */,
-				6B8E67F21F4FBE8600187DBF /* fall.wav */,
-				6B8E67F31F4FBE8600187DBF /* highScore.wav */,
-				6B8E67F41F4FBE8600187DBF /* kick.wav */,
-				6B8E67F51F4FBE8600187DBF /* stick_grow_loop.wav */,
-				6B8E67F61F4FBE8600187DBF /* touch_mid.wav */,
-				6B8E67F71F4FBE8600187DBF /* victory.wav */,
+				6B8E67F01F4FBE8600187DBF /* zftbg_country.mp3 */,
+				6B8E67F11F4FBE8600187DBF /* zftdead.wav */,
+				6B8E67F21F4FBE8600187DBF /* zftfall.wav */,
+				6B8E67F31F4FBE8600187DBF /* zfthighScore.wav */,
+				6B8E67F41F4FBE8600187DBF /* zftkick.wav */,
+				6B8E67F51F4FBE8600187DBF /* zftstick_grow_loop.wav */,
+				6B8E67F61F4FBE8600187DBF /* zfttouch_mid.wav */,
+				6B8E67F71F4FBE8600187DBF /* zftvictory.wav */,
 			);
 			path = Sound;
 			sourceTree = "<group>";
@@ -411,37 +435,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B8E67FC1F4FBE8600187DBF /* stick_background.jpg in Resources */,
 				6B2BF0931F4EDB18008AE662 /* HUD_success@2x.png in Resources */,
 				6B8E68251F50244700187DBF /* MyMoneyTableViewCell.xib in Resources */,
 				6B8E68151F5014F200187DBF /* TakeMoneyViewController.xib in Resources */,
+				6B8403A91F555E9100F6DAD0 /* WebViewController.xib in Resources */,
 				6B8E681B1F50167000187DBF /* MyMoneyViewController.xib in Resources */,
 				6B2BF0911F4EDB18008AE662 /* HUD_info@2x.png in Resources */,
 				6B8E67F91F4FBE8600187DBF /* button_retry_up.png in Resources */,
-				6B8E68001F4FBE8600187DBF /* bg_country.mp3 in Resources */,
+				6B8E68001F4FBE8600187DBF /* zftbg_country.mp3 in Resources */,
 				6B8E67FF1F4FBE8600187DBF /* starParticle.png in Resources */,
-				6B8E68041F4FBE8600187DBF /* kick.wav in Resources */,
+				6B8E68041F4FBE8600187DBF /* zftkick.wav in Resources */,
 				6BA510791F4D1F320054ECA6 /* IMG_0504.JPG in Resources */,
-				6B8E68071F4FBE8600187DBF /* victory.wav in Resources */,
-				6B8E68031F4FBE8600187DBF /* highScore.wav in Resources */,
+				6B8E68071F4FBE8600187DBF /* zftvictory.wav in Resources */,
+				6B8E68031F4FBE8600187DBF /* zfthighScore.wav in Resources */,
 				6BA510811F4D23F70054ECA6 /* FirstViewController.xib in Resources */,
 				6B8E67FD1F4FBE8600187DBF /* Main.storyboard in Resources */,
 				6B8E67FB1F4FBE8600187DBF /* human2.png in Resources */,
 				6B8E67F81F4FBE8600187DBF /* button_retry_down.png in Resources */,
-				6B8E68061F4FBE8600187DBF /* touch_mid.wav in Resources */,
+				6B8E68061F4FBE8600187DBF /* zfttouch_mid.wav in Resources */,
 				6B7DFF871F4D1801002CA103 /* LaunchScreen.storyboard in Resources */,
 				6B2BF0941F4EDB18008AE662 /* HUD_success@3x.png in Resources */,
 				6B7DFF841F4D1801002CA103 /* Assets.xcassets in Resources */,
 				6B8E67FA1F4FBE8600187DBF /* human1.png in Resources */,
-				6B8E68021F4FBE8600187DBF /* fall.wav in Resources */,
+				6B8403A51F554E8300F6DAD0 /* stick_background.jpg in Resources */,
+				6B8E68021F4FBE8600187DBF /* zftfall.wav in Resources */,
 				6B1658C01F5409C400B5EE0C /* SettingMyAccountViewController.xib in Resources */,
-				6B8E68011F4FBE8600187DBF /* dead.wav in Resources */,
+				6B8E68011F4FBE8600187DBF /* zftdead.wav in Resources */,
 				6B2BF0901F4EDB18008AE662 /* HUD_error@3x.png in Resources */,
 				6B2BF0921F4EDB18008AE662 /* HUD_info@3x.png in Resources */,
 				6B2BF08F1F4EDB18008AE662 /* HUD_error@2x.png in Resources */,
 				6B8E67FE1F4FBE8600187DBF /* StarExplosion.sks in Resources */,
 				6B1658BC1F54065C00B5EE0C /* MyAccountViewController.xib in Resources */,
-				6B8E68051F4FBE8600187DBF /* stick_grow_loop.wav in Resources */,
+				6B8E68051F4FBE8600187DBF /* zftstick_grow_loop.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,20 +535,25 @@
 				6B8E68141F5014F200187DBF /* TakeMoneyViewController.swift in Sources */,
 				6B8E680D1F4FBE9700187DBF /* GameViewController.swift in Sources */,
 				6BA510801F4D23F70054ECA6 /* FirstViewController.swift in Sources */,
+				6B8403A81F555E9100F6DAD0 /* WebViewController.swift in Sources */,
 				6B8E681A1F50167000187DBF /* MyMoneyViewController.swift in Sources */,
 				6B7DFF7F1F4D1801002CA103 /* ViewController.swift in Sources */,
 				6B7DFF7D1F4D1801002CA103 /* AppDelegate.swift in Sources */,
 				6B2BF0981F4EDBF9008AE662 /* NSObject+ALiHUD.m in Sources */,
 				6B8E68291F5026C300187DBF /* Aplication.swift in Sources */,
 				6B1658BB1F54065C00B5EE0C /* MyAccountViewController.swift in Sources */,
+				6B8403AD1F5565E000F6DAD0 /* ScrollViewController.swift in Sources */,
 				6B1658B31F53EF3D00B5EE0C /* RewardInfo.m in Sources */,
 				6B8E68241F50244700187DBF /* MyMoneyTableViewCell.swift in Sources */,
+				6B8403B31F55720E00F6DAD0 /* TaskLevel.m in Sources */,
 				6B8E68271F50251800187DBF /* MoneyModel.swift in Sources */,
 				6B2BF08E1F4EDB18008AE662 /* ALiProgressHUD.m in Sources */,
 				6B1658BF1F5409C400B5EE0C /* SettingMyAccountViewController.swift in Sources */,
 				6B1658AD1F53C80600B5EE0C /* OCTool.m in Sources */,
+				6B8403B01F5571FC00F6DAD0 /* AppModel.m in Sources */,
 				6B8E680F1F4FBE9700187DBF /* Tools.swift in Sources */,
 				6B1658B41F53EF3D00B5EE0C /* UIViewController+RedPacket.m in Sources */,
+				6B8403B61F55721A00F6DAD0 /* Admob.m in Sources */,
 				6B8E680C1F4FBE9700187DBF /* Defined.swift in Sources */,
 				6B8E680E1F4FBE9700187DBF /* StickHeroGameScene.swift in Sources */,
 			);

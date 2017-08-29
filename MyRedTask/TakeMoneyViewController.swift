@@ -7,9 +7,11 @@
 //
 
 import UIKit
-
-class TakeMoneyViewController: UIViewController,UITableViewDelegate ,UITableViewDataSource {
+import GoogleMobileAds
+class TakeMoneyViewController: UIViewController,UITableViewDelegate ,UITableViewDataSource,GADInterstitialDelegate {
     @IBOutlet weak var tableView: UITableView!
+    
+    var interstitial = GADInterstitial.init(adUnitID: Aplication.sharedInstance.appModel.admob.admobTwoInter)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,13 +21,16 @@ class TakeMoneyViewController: UIViewController,UITableViewDelegate ,UITableView
         tableView.tableFooterView = UIView()
         tableView.reloadData()
         // Do any additional setup after loading the view.
+        self.interstitial.load(GADRequest())
+        self.interstitial.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
+
     func numberOfSections(in tableView: UITableView) -> Int {
         
         return 1
@@ -60,5 +65,33 @@ class TakeMoneyViewController: UIViewController,UITableViewDelegate ,UITableView
         // Pass the selected object to the new view controller.
     }
     */
-
+    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
+        if self.interstitial.isReady {
+            self.interstitial.present(fromRootViewController: self)
+        }
+    }
+    
+    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+        
+    }
+    
+    func interstitialWillDismissScreen(_ ad: GADInterstitial) {
+        
+    }
+    
+    func interstitialWillPresentScreen(_ ad: GADInterstitial) {
+        
+    }
+    
+    func interstitialWillLeaveApplication(_ ad: GADInterstitial) {
+        
+    }
+    
+    func interstitialDidFail(toPresentScreen ad: GADInterstitial) {
+        
+    }
+    
+    func interstitial(_ ad: GADInterstitial, didFailToReceiveAdWithError error: GADRequestError) {
+        
+    }
 }

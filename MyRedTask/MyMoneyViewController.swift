@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
-class MyMoneyViewController: UIViewController {
+
+class MyMoneyViewController: UIViewController,GADInterstitialDelegate {
     @IBOutlet weak var OneYuan: UIView!
     @IBOutlet weak var twoYuan: UIView!
     @IBOutlet weak var tishiLabel: UILabel!
@@ -16,6 +18,9 @@ class MyMoneyViewController: UIViewController {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var TakeButton: UIButton!
     @IBOutlet weak var MoneyButton: UIButton!
+    
+    var interstitial = GADInterstitial.init(adUnitID: Aplication.sharedInstance.appModel.admob.admobOneInter)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "我的红包"
@@ -47,7 +52,12 @@ class MyMoneyViewController: UIViewController {
         
         priceLabel.text = "￥ \(Aplication.sharedInstance.myAllPrice())"
         // Do any additional setup after loading the view.
+        
+        self.interstitial.load(GADRequest())
+        self.interstitial.delegate = self
     }
+    
+
     
     func popView() {
         self.navigationController?.popViewController(animated: true)
@@ -64,7 +74,10 @@ class MyMoneyViewController: UIViewController {
     @IBAction func tixian(_ sender: Any) {
         
         if Aplication.sharedInstance.myAllPrice() > 30 {
+            self.showSuccessText("大神,添加工作微信提现！")
             
+        }else{
+            self.showErrorText("超过30元方可提现哦！")
         }
     }
     
@@ -90,5 +103,34 @@ class MyMoneyViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
+        if self.interstitial.isReady {
+            self.interstitial.present(fromRootViewController: self)
+        }
+    }
+    
+    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+        
+    }
+    
+    func interstitialWillDismissScreen(_ ad: GADInterstitial) {
+        
+    }
+    
+    func interstitialWillPresentScreen(_ ad: GADInterstitial) {
+        
+    }
+    
+    func interstitialWillLeaveApplication(_ ad: GADInterstitial) {
+        
+    }
+    
+    func interstitialDidFail(toPresentScreen ad: GADInterstitial) {
+        
+    }
+    
+    func interstitial(_ ad: GADInterstitial, didFailToReceiveAdWithError error: GADRequestError) {
+        
+    }
 
 }

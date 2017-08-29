@@ -12,6 +12,7 @@
 #import <YYCategories/YYCategories.h>
 #import <YYModel/YYModel.h>
 #import "OCTool.h"
+#import "AppModel.h"
 #import "RewardInfo.h"
 #import "UIViewController+RedPacket.h"
 #endif /* Header_h */
