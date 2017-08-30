@@ -68,7 +68,7 @@ class ScrollViewController: UIViewController,UIScrollViewDelegate {
         imageViewfive.frame = CGRect(x: self.view.width*4, y: 0, width: self.view.width, height: self.view.height)
         
         let button = UIButton()
-        button.backgroundColor = UIColor.init(hexString: "#e74300")
+        button.backgroundColor = UIColor.red
         button.setTitle("开始赚钱吧", for: UIControlState())
         button.setTitleColor(UIColor.white, for: .normal)
         button.layer.cornerRadius = 7
@@ -83,7 +83,7 @@ class ScrollViewController: UIViewController,UIScrollViewDelegate {
         
         pageControl = UIPageControl()
         pageControl.backgroundColor = UIColor.clear
-        pageControl.currentPageIndicatorTintColor = UIColor.white
+        pageControl.currentPageIndicatorTintColor = UIColor.orange
         pageControl.pageIndicatorTintColor = UIColor.lightGray
         pageControl.numberOfPages = 5
         pageControl.currentPage = 0

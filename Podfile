@@ -9,4 +9,10 @@ target 'MyRedTask' do
     pod 'YYModel'
     pod 'SVProgressHUD'
     pod 'SnapKit'
+    # U-Share SDK UI模块（分享面板，建议添加）
+    pod 'UMengUShare/UI'
+    
+    # 集成微信(精简版0.2M)
+    pod 'UMengUShare/Social/ReducedWeChat'
+    pod 'UMengUShare/Social/ReducedSina'
 end

@@ -48,15 +48,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate,ScrollViewControllerDelega
         
         let userDefaults = UserDefaults.standard
         
-        //        if !userDefaults.bool(forKey: "isNoFirstLaunch"){
-//        userDefaults.set(true, forKey: "isNoFirstLaunch")
-//        setFirstView()
-        //        }else{
-                    let nvc = UINavigationController.init(rootViewController: FirstViewController())
-                    window?.rootViewController = nvc
-                    window?.makeKeyAndVisible()
-        //        }
-        //
+//        if !userDefaults.bool(forKey: "isNoFirstLaunch"){
+//            userDefaults.set(true, forKey: "isNoFirstLaunch")
+            setFirstView()
+//            }else{
+//                    let nvc = UINavigationController.init(rootViewController: FirstViewController())
+//                    window?.rootViewController = nvc
+//                    window?.makeKeyAndVisible()
+//                }
+        
         
         return true
     }

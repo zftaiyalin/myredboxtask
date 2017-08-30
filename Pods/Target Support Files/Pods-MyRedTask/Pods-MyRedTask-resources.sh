@@ -89,6 +89,8 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "TGSDK/TGSDK/Assets/TapjoyResources.bundle"
   install_resource "TGSDK/TGSDK/Assets/TGADSDK.bundle"
   install_resource "TGSDK/TGSDK/Assets/UnityAds.bundle"
+  install_resource "UMengUShare/UShareSDK/UMSocialSDK/UMSocialSDKPromptResources.bundle"
+  install_resource "UMengUShare/UShareSDK/UMSocialUI/UMSocialSDKResources.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "TGSDK/TGSDK/Assets/TGStartedIcon.png"
@@ -103,6 +105,8 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "TGSDK/TGSDK/Assets/TapjoyResources.bundle"
   install_resource "TGSDK/TGSDK/Assets/TGADSDK.bundle"
   install_resource "TGSDK/TGSDK/Assets/UnityAds.bundle"
+  install_resource "UMengUShare/UShareSDK/UMSocialSDK/UMSocialSDKPromptResources.bundle"
+  install_resource "UMengUShare/UShareSDK/UMSocialUI/UMSocialSDKResources.bundle"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
