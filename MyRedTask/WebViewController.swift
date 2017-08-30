@@ -7,12 +7,12 @@
 //
 
 import UIKit
-import GoogleMobileAds
-class WebViewController: UIViewController,GADInterstitialDelegate {
+//import GoogleMobileAds
+class WebViewController: UIViewController {
 
     @IBOutlet weak var webView: UIWebView!
 //    ca-app-pub-3676267735536366/7929955336
-    var interstitial = GADInterstitial.init(adUnitID: Aplication.sharedInstance.appModel.admob.admobOneInter)
+//    var interstitial = GADInterstitial.init(adUnitID: Aplication.sharedInstance.appModel.admob.admobOneInter)
 //    ca-app-pub-3676267735536366/2147365744
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +25,8 @@ class WebViewController: UIViewController,GADInterstitialDelegate {
         
         self.title = "许可协议"
         self.webView.loadRequest(URLRequest.init(url: URL.init(string: "http://ovfte6tum.bkt.clouddn.com/index.html")!))
-        self.interstitial.load(GADRequest())
-        self.interstitial.delegate = self
+//        self.interstitial.load(GADRequest())
+//        self.interstitial.delegate = self
     }
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
@@ -37,35 +37,35 @@ class WebViewController: UIViewController,GADInterstitialDelegate {
     }
  
     
-    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
-        if self.interstitial.isReady {
-            self.interstitial.present(fromRootViewController: self)
-        }
-    }
-    
-    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
-        
-    }
-    
-    func interstitialWillDismissScreen(_ ad: GADInterstitial) {
-        
-    }
-    
-    func interstitialWillPresentScreen(_ ad: GADInterstitial) {
-        
-    }
-    
-    func interstitialWillLeaveApplication(_ ad: GADInterstitial) {
-        
-    }
-    
-    func interstitialDidFail(toPresentScreen ad: GADInterstitial) {
-        
-    }
-    
-    func interstitial(_ ad: GADInterstitial, didFailToReceiveAdWithError error: GADRequestError) {
-        
-    }
+//    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
+//        if self.interstitial.isReady {
+//            self.interstitial.present(fromRootViewController: self)
+//        }
+//    }
+//    
+//    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+//        
+//    }
+//    
+//    func interstitialWillDismissScreen(_ ad: GADInterstitial) {
+//        
+//    }
+//    
+//    func interstitialWillPresentScreen(_ ad: GADInterstitial) {
+//        
+//    }
+//    
+//    func interstitialWillLeaveApplication(_ ad: GADInterstitial) {
+//        
+//    }
+//    
+//    func interstitialDidFail(toPresentScreen ad: GADInterstitial) {
+//        
+//    }
+//    
+//    func interstitial(_ ad: GADInterstitial, didFailToReceiveAdWithError error: GADRequestError) {
+//        
+//    }
 
     /*
     // MARK: - Navigation

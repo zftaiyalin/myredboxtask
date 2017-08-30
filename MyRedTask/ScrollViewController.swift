@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SnapKit
 
 protocol ScrollViewControllerDelegate: class {
     func pushMainView()
@@ -25,58 +26,74 @@ class ScrollViewController: UIViewController,UIScrollViewDelegate {
         scrollView.backgroundColor = UIColor.white
         self.view.addSubview(scrollView)
         
-//        scrollView.snp.makeConstraints { (make) in
-//            make.edges.equalTo(self.view)
-//        }
+        scrollView.snp.makeConstraints { (make) in
+            make.edges.equalTo(self.view)
+        }
         
-        scrollView.contentSize = CGSize(width: self.view.width*3, height: self.view.height)
+        scrollView.contentSize = CGSize(width: self.view.width*5, height: self.view.height)
         scrollView.isPagingEnabled = true
         
         let imageViewOne = UIImageView()
-        imageViewOne.image = UIImage(named: "kc_img_guide_3")
+        imageViewOne.image = UIImage(named: "srcollone")
         imageViewOne.contentMode = .scaleToFill
         scrollView.addSubview(imageViewOne)
         imageViewOne.frame = CGRect(x: 0, y: 0, width: self.view.width, height: self.view.height)
         
         let imageViewTwo = UIImageView()
-        imageViewTwo.image = UIImage(named: "kc_img_guide_2")
+        imageViewTwo.image = UIImage(named: "scrollTwo")
         scrollView.addSubview(imageViewTwo)
         imageViewTwo.contentMode = .scaleToFill
         imageViewTwo.frame = CGRect(x: self.view.width, y: 0, width: self.view.width, height: self.view.height)
         
         let imageViewThree = UIImageView()
-        imageViewThree.image = UIImage(named: "kc_img_guide_1")
+        imageViewThree.image = UIImage(named: "scrollthree")
         imageViewThree.isUserInteractionEnabled = true
         scrollView.addSubview(imageViewThree)
         imageViewThree.contentMode = .scaleToFill
         imageViewThree.frame = CGRect(x: self.view.width*2, y: 0, width: self.view.width, height: self.view.height)
         
-//        let button = UIButton()
-//        button.backgroundColor = UIColor.white
-//        button.setTitle("点击进入", for: UIControlState())
-//        button.setTitleColor(UIColor(rgba:"#485b7e"), for: UIControlState())
-//        button.addTarget(self, action: #selector(tapButton), for: .touchUpInside)
-//        imageViewThree.addSubview(button)
         
-//        button.snp.makeConstraints { (make) in
-//            make.right.equalTo(imageViewThree).offset(-44)
-//            make.bottom.equalTo(imageViewThree).offset(-64)
-//            make.size.equalTo(CGSize(width: 120, height: 40))
-//        }
+        let imageViewfour = UIImageView()
+        imageViewfour.image = UIImage(named: "scrollfour")
+        imageViewfour.isUserInteractionEnabled = true
+        scrollView.addSubview(imageViewfour)
+        imageViewfour.contentMode = .scaleToFill
+        imageViewfour.frame = CGRect(x: self.view.width*3, y: 0, width: self.view.width, height: self.view.height)
+        
+        let imageViewfive = UIImageView()
+        imageViewfive.image = UIImage(named: "scrollfive")
+        imageViewfive.isUserInteractionEnabled = true
+        scrollView.addSubview(imageViewfive)
+        imageViewfive.contentMode = .scaleToFill
+        imageViewfive.frame = CGRect(x: self.view.width*4, y: 0, width: self.view.width, height: self.view.height)
+        
+        let button = UIButton()
+        button.backgroundColor = UIColor.init(hexString: "#e74300")
+        button.setTitle("开始赚钱吧", for: UIControlState())
+        button.setTitleColor(UIColor.white, for: .normal)
+        button.layer.cornerRadius = 7
+        button.addTarget(self, action: #selector(tapButton), for: .touchUpInside)
+        imageViewfive.addSubview(button)
+        
+        button.snp.makeConstraints { (make) in
+            make.top.equalTo(imageViewfive).offset(88)
+            make.centerX.equalTo(imageViewfive)
+            make.size.equalTo(CGSize(width: 120, height: 40))
+        }
         
         pageControl = UIPageControl()
         pageControl.backgroundColor = UIColor.clear
         pageControl.currentPageIndicatorTintColor = UIColor.white
         pageControl.pageIndicatorTintColor = UIColor.lightGray
-        pageControl.numberOfPages = 3
+        pageControl.numberOfPages = 5
         pageControl.currentPage = 0
         self.view.addSubview(pageControl)
         
-//        pageControl.snp.makeConstraints { (make) in
-//            make.centerX.equalTo(self.view)
-//            make.bottom.equalTo(self.view).offset(-40)
-//            make.size.equalTo(CGSize(width: 124, height: 40))
-//        }
+        pageControl.snp.makeConstraints { (make) in
+            make.centerX.equalTo(self.view)
+            make.bottom.equalTo(self.view).offset(-40)
+            make.size.equalTo(CGSize(width: 124, height: 40))
+        }
         
         
         // Do any additional setup after loading the view.
@@ -93,21 +110,21 @@ class ScrollViewController: UIViewController,UIScrollViewDelegate {
     func tapButton() {
         self.delegate.pushMainView()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

@@ -76,6 +76,34 @@ EOM
       ;;
   esac
 }
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_resource "TGSDK/TGSDK/Assets/TGStartedIcon.png"
+  install_resource "TGSDK/TGSDK/Assets/TGUnstartedIcon.png"
+  install_resource "TGSDK/TGSDK/Assets/vg_close.png"
+  install_resource "TGSDK/TGSDK/Assets/vg_cta.png"
+  install_resource "TGSDK/TGSDK/Assets/vg_mute_off.png"
+  install_resource "TGSDK/TGSDK/Assets/vg_mute_on.png"
+  install_resource "TGSDK/TGSDK/Assets/vg_privacy.png"
+  install_resource "TGSDK/TGSDK/Assets/__vungle.db"
+  install_resource "TGSDK/TGSDK/Assets/ChanceAdRes.bundle"
+  install_resource "TGSDK/TGSDK/Assets/TapjoyResources.bundle"
+  install_resource "TGSDK/TGSDK/Assets/TGADSDK.bundle"
+  install_resource "TGSDK/TGSDK/Assets/UnityAds.bundle"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_resource "TGSDK/TGSDK/Assets/TGStartedIcon.png"
+  install_resource "TGSDK/TGSDK/Assets/TGUnstartedIcon.png"
+  install_resource "TGSDK/TGSDK/Assets/vg_close.png"
+  install_resource "TGSDK/TGSDK/Assets/vg_cta.png"
+  install_resource "TGSDK/TGSDK/Assets/vg_mute_off.png"
+  install_resource "TGSDK/TGSDK/Assets/vg_mute_on.png"
+  install_resource "TGSDK/TGSDK/Assets/vg_privacy.png"
+  install_resource "TGSDK/TGSDK/Assets/__vungle.db"
+  install_resource "TGSDK/TGSDK/Assets/ChanceAdRes.bundle"
+  install_resource "TGSDK/TGSDK/Assets/TapjoyResources.bundle"
+  install_resource "TGSDK/TGSDK/Assets/TGADSDK.bundle"
+  install_resource "TGSDK/TGSDK/Assets/UnityAds.bundle"
+fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
 rsync -avr --copy-links --no-relative --exclude '*/.svn/*' --files-from="$RESOURCES_TO_COPY" / "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

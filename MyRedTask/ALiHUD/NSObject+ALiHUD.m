@@ -26,6 +26,7 @@
     [self dismissLoading];
     [ALiProgressHUD setForegroundColor:[UIColor whiteColor]];
     [ALiProgressHUD showErrorWithStatus:aText];
+  
 }
 
 - (void)showSuccessText:(NSString *)aText

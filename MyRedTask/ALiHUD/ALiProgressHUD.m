@@ -26,7 +26,7 @@
     [self setSuccessImage:[UIImage imageNamed:@"HUD_success"]];
     [self setInfoImage:[UIImage imageNamed:@"HUD_info"]];
     [self setErrorImage:[UIImage imageNamed:@"HUD_error"]];
-    
+    [self setMaximumDismissTimeInterval:1.5];
     [self setDefaultMaskType:SVProgressHUDMaskTypeClear];
     [self setDefaultStyle:SVProgressHUDStyleDark];
     [self setCornerRadius:8.0];
@@ -37,7 +37,7 @@
 // 根据 提示文字字数，判断 HUD 显示时间
 - (NSTimeInterval)displayDurationForString:(NSString*)string
 {
-    return MIN((float)string.length*0.06 + 0.5, 2.0);
+    return MIN((float)string.length*0.06 + 0.5, 1.0);
 }
 
 // 修改 HUD 颜色，需要取消混合效果(使`backgroundColroForStyle`方法有效)
@@ -109,18 +109,18 @@
 
 - (CGFloat)calculateTransformAngle:(UIInterfaceOrientation )orientation
 {
-    CGFloat angle;
+    CGFloat angle ;
     if (self.lastOrientation == UIInterfaceOrientationPortrait) {
-        switch (orientation) {
-            case UIInterfaceOrientationLandscapeRight:
-                angle = M_PI_2;
-                break;
-            case UIInterfaceOrientationLandscapeLeft:
-                angle = -M_PI_2;
-                break;
-            default:
-                break;
-        }
+//        switch (orientation) {
+//            case UIInterfaceOrientationLandscapeRight:
+//                angle = M_PI_2;
+//                break;
+//            case UIInterfaceOrientationLandscapeLeft:
+//                angle = -M_PI_2;
+//                break;
+//            default:
+//                break;
+//        }
     } else if (self.lastOrientation == UIInterfaceOrientationLandscapeRight) {
         switch (orientation) {
             case UIInterfaceOrientationPortrait:

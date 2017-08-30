@@ -11,6 +11,7 @@
 #import "NSObject+ALiHUD.h"
 #import <YYCategories/YYCategories.h>
 #import <YYModel/YYModel.h>
+#import <TGSDK/TGSDK.h>
 #import "OCTool.h"
 #import "AppModel.h"
 #import "RewardInfo.h"

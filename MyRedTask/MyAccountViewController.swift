@@ -7,11 +7,11 @@
 //
 
 import UIKit
-import GoogleMobileAds
-class MyAccountViewController: UIViewController,GADInterstitialDelegate {
+//import GoogleMobileAds
+class MyAccountViewController: UIViewController {
     @IBOutlet weak var zhifubao: UIButton!
     @IBOutlet weak var weixin: UIButton!
-    var interstitial = GADInterstitial.init(adUnitID: Aplication.sharedInstance.appModel.admob.admobTwoInter)
+//    var interstitial = GADInterstitial.init(adUnitID: Aplication.sharedInstance.appModel.admob.admobTwoInter)
     @IBAction func tapZhifu(_ sender: Any) {
         let cr = SettingMyAccountViewController()
         cr.isWeiXin = false
@@ -32,8 +32,8 @@ class MyAccountViewController: UIViewController,GADInterstitialDelegate {
         self.weixin.layer.borderColor = UIColor.init(hexString: "#dfdfdf")?.cgColor
         self.zhifubao.layer.borderWidth = 0.3
         self.weixin.layer.borderWidth = 0.3
-        self.interstitial.load(GADRequest())
-        self.interstitial.delegate = self
+//        self.interstitial.load(GADRequest())
+//        self.interstitial.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -52,33 +52,33 @@ class MyAccountViewController: UIViewController,GADInterstitialDelegate {
         // Pass the selected object to the new view controller.
     }
     */
-    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
-        if self.interstitial.isReady {
-            self.interstitial.present(fromRootViewController: self)
-        }
-    }
-    
-    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
-        
-    }
-    
-    func interstitialWillDismissScreen(_ ad: GADInterstitial) {
-        
-    }
-    
-    func interstitialWillPresentScreen(_ ad: GADInterstitial) {
-        
-    }
-    
-    func interstitialWillLeaveApplication(_ ad: GADInterstitial) {
-        
-    }
-    
-    func interstitialDidFail(toPresentScreen ad: GADInterstitial) {
-        
-    }
-    
-    func interstitial(_ ad: GADInterstitial, didFailToReceiveAdWithError error: GADRequestError) {
-        
-    }
+//    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
+//        if self.interstitial.isReady {
+//            self.interstitial.present(fromRootViewController: self)
+//        }
+//    }
+//    
+//    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+//        
+//    }
+//    
+//    func interstitialWillDismissScreen(_ ad: GADInterstitial) {
+//        
+//    }
+//    
+//    func interstitialWillPresentScreen(_ ad: GADInterstitial) {
+//        
+//    }
+//    
+//    func interstitialWillLeaveApplication(_ ad: GADInterstitial) {
+//        
+//    }
+//    
+//    func interstitialDidFail(toPresentScreen ad: GADInterstitial) {
+//        
+//    }
+//    
+//    func interstitial(_ ad: GADInterstitial, didFailToReceiveAdWithError error: GADRequestError) {
+//        
+//    }
 }

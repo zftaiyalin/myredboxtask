@@ -1,0 +1,79 @@
+{
+  "name": "TGSDK",
+  "version": "1.6.7",
+  "summary": "Yomob Ad SDK",
+  "description": "Yomob Ad SDK.",
+  "homepage": "https://yomob.com",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "yomob": "support@yomob.com"
+  },
+  "source": {
+    "git": "https://github.com/soulgame/CocoaPods-TGSDK.git",
+    "tag": "1.6.7"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "TGSDK/Classes/**/*",
+  "resources": [
+    "TGSDK/Assets/*"
+  ],
+  "public_header_files": "TGSDK/Classes/include/TGSDK/TGSDK.h",
+  "libraries": [
+    "stdc++",
+    "sqlite3",
+    "xml2",
+    "z"
+  ],
+  "vendored_libraries": "TGSDK/libTGSDK.1.6.7.a",
+  "frameworks": [
+    "Accelerate",
+    "AdSupport",
+    "AudioToolbox",
+    "AVFoundation",
+    "CFNetwork",
+    "CoreGraphics",
+    "CoreLocation",
+    "CoreTelephony",
+    "CoreMedia",
+    "CoreMotion",
+    "EventKit",
+    "GLKit",
+    "iAd",
+    "MediaPlayer",
+    "MessageUI",
+    "MobileCoreServices",
+    "QuartzCore",
+    "Security",
+    "Social",
+    "StoreKit",
+    "SystemConfiguration",
+    "WebKit",
+    "JavaScriptCore"
+  ],
+  "vendored_frameworks": [
+    "TGSDK/frameworks/AdColony.framework",
+    "TGSDK/frameworks/AppLovinSDK.framework",
+    "TGSDK/frameworks/AppTracker.framework",
+    "TGSDK/frameworks/AppnextLib.framework",
+    "TGSDK/frameworks/AppnextSDKCore.framework",
+    "TGSDK/frameworks/Centrixlink.framework",
+    "TGSDK/frameworks/ChanceAdSDK.framework",
+    "TGSDK/frameworks/Chartboost.framework",
+    "TGSDK/frameworks/FBAudienceNetwork.framework",
+    "TGSDK/frameworks/FMDB.framework",
+    "TGSDK/frameworks/GoogleMobileAds.framework",
+    "TGSDK/frameworks/InMobi.framework",
+    "TGSDK/frameworks/MVSDK.framework",
+    "TGSDK/frameworks/MVSDKInterstitial.framework",
+    "TGSDK/frameworks/MVSDKReward.framework",
+    "TGSDK/frameworks/OneWaySDK.framework",
+    "TGSDK/frameworks/Tapjoy.framework",
+    "TGSDK/frameworks/UnityAds.framework",
+    "TGSDK/frameworks/VungleSDK.framework"
+  ]
+}

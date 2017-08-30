@@ -7,12 +7,12 @@
 //
 
 import UIKit
-import GoogleMobileAds
+//import GoogleMobileAds
 
 class FirstViewController: UIViewController {
 
     @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var bannerView: GADBannerView!
+//    @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var mainButton: UIButton!
     var currentPrice = 0.0
     var isReward = false
@@ -26,18 +26,20 @@ class FirstViewController: UIViewController {
         mainButton.layer.cornerRadius = 60
 //        "ca-app-pub-3676267735536366/8592596428"
         
-        bannerView.adUnitID = Aplication.sharedInstance.appModel.admob.admobBanr
-        bannerView.rootViewController = self
-
-        let request: GADRequest = GADRequest()
-        request.testDevices = [""]
-        bannerView.load(request)
-        
-        GADRewardBasedVideoAd.sharedInstance().delegate = self
-        
-//        self.requestRewardedVideo()
+//        bannerView.adUnitID = Aplication.sharedInstance.appModel.admob.admobBanr
+//        bannerView.rootViewController = self
+//
+//        let request: GADRequest = GADRequest()
+//        request.testDevices = [""]
+//        bannerView.load(request)
         
         priceLabel.text = "今日共抢：￥ \(Aplication.sharedInstance.myAllTodayPrice())"
+        
+        TGSDK.setDebugModel(true)
+        TGSDK.preloadAd(self)
+        TGSDK.setADDelegate(self)
+        TGSDK.setRewardVideoADDelegate(self)
+//        TGSDK.
     }
 
     override func didReceiveMemoryWarning() {
@@ -84,12 +86,8 @@ class FirstViewController: UIViewController {
     
     func shareButtonPress() {
         self.cancelButtonClicked()
-        if GADRewardBasedVideoAd.sharedInstance().isReady {
-            GADRewardBasedVideoAd.sharedInstance().present(fromRootViewController: self)
-        }else{
-            self.showText("正在获取红包视频...")
-            self.requestRewardedVideo()
-        }
+        TGSDK.showAd("Wk3OlqsRSBddoQY4LzP")
+        
     }
     
 //    广告单元名称： 激励
@@ -104,12 +102,9 @@ class FirstViewController: UIViewController {
     }
     */
     @IBAction func tapQiang(_ sender: Any) {
-        if GADRewardBasedVideoAd.sharedInstance().isReady {
-            GADRewardBasedVideoAd.sharedInstance().present(fromRootViewController: self)
-        }else{
-            self.showText("正在获取红包视频...")
-            self.requestRewardedVideo()
-        }
+
+            TGSDK.showAd("Wk3OlqsRSBddoQY4LzP")
+
     }
     @IBAction func pushMyMoney(_ sender: Any) {
         self.navigationController?.pushViewController(MyMoneyViewController(), animated: true)
@@ -126,19 +121,44 @@ class FirstViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    func requestRewardedVideo() {
-        GADRewardBasedVideoAd.sharedInstance().load(GADRequest()
-            , withAdUnitID: Aplication.sharedInstance.appModel.admob.admobReVideo)
-    }
 }
-
-extension FirstViewController:GADRewardBasedVideoAdDelegate{
-    func rewardBasedVideoAdDidOpen(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
-//        NSLog(@"Opened reward based video ad.");
+extension FirstViewController:TGPreloadADDelegate,TGRewardVideoADDelegate,TGADDelegate{
+    
+    func onPreloadSuccess(_ result: String?) {
+        // 广告预加载调用成功
     }
     
-    func rewardBasedVideoAdDidClose(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
-//        NSLog(@"关闭admob奖励视频");
+    func onPreloadFailed(_ result: String?, withError error: Error?) {
+        // 广告预加载调用失败
+    }
+    
+    func onCPADLoaded(_ result: String) {
+        // 静态插屏广告已就绪
+        
+    }
+    
+    
+    func onVideoADLoaded(_ result: String) {
+        // 视频广告已就绪
+//         self.dismissLoading()
+//        TGSDK.showAd("Wk3OlqsRSBddoQY4LzP")
+    }
+    func onShowSuccess(_ result: String) {
+        // 广告开始播放
+        self.dismissLoading()
+    }
+    
+    func onShowFailed(_ result: String, withError error: Error?) {
+        // 广告播放失败
+       
+         self.showErrorText("任务正在加载中请重新点击")
+    }
+    func onADComplete(_ result: String) {
+        // 广告播放完成
+    }
+    
+    func onADClose(_ result: String) {
+        // 广告关闭
         
         if isReward == true {
             isReward = false
@@ -153,38 +173,77 @@ extension FirstViewController:GADRewardBasedVideoAdDelegate{
             self.initRedPacketWindow(info)
             
         }
+
+    }
+    func onADClick(_ result: String) {
+        // 用户点击了广告，正在跳转到其他页面
     }
     
-    func rewardBasedVideoAdDidReceive(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
-//        NSLog(@"Reward based video ad is received.");
-        self.dismissLoading()
-        if GADRewardBasedVideoAd.sharedInstance().isReady {
-            GADRewardBasedVideoAd.sharedInstance().present(fromRootViewController: self)
-        }else{
-            self.showText("正在获取红包视频...")
-            self.requestRewardedVideo()
-        }
-    }
-    func rewardBasedVideoAdDidStartPlaying(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
-//        NSLog(@"admob奖励视频开始播放");
-    }
-    
-    func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didFailToLoadWithError error: Error) {
-//        NSLog(@"Reward based video ad failed to load.");
-//        NSLog(@"admob奖励视频加载失败");
-        self.showErrorText("视频加载失败")
-     
-    }
-    
-    func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didRewardUserWith reward: GADAdReward) {
-//        NSLog(@"有效的播放admob奖励视频");
-  
-       
-        
+    func onADAwardSuccess(_ result: String) {
+        // 奖励广告条件达成，可以向用户发放奖励
         isReward = true
     }
     
-    func rewardBasedVideoAdWillLeaveApplication(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
-//        NSLog(@"点击admo奖励视频准备离开app");
+    func onADAwardFailed(_ result: String, withError error: Error?) {
+        // 奖励广告条件未达成，无法向用户发放奖励
+         self.showErrorText("红包任务失败")
     }
+    
+
 }
+//extension FirstViewController:GADRewardBasedVideoAdDelegate{
+//    func rewardBasedVideoAdDidOpen(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
+////        NSLog(@"Opened reward based video ad.");
+//    }
+//    
+//    func rewardBasedVideoAdDidClose(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
+////        NSLog(@"关闭admob奖励视频");
+//        
+//        if isReward == true {
+//            isReward = false
+//            
+//            let info = RewardInfo.init()
+//            currentPrice = Double(Aplication.sharedInstance.backSuijiMoney())
+//            info.money         = Float(currentPrice);
+//            info.rewardName    = "获得红包了！😊😊";
+//            info.rewardContent = "恭喜你得到红包~";
+//            info.rewardStatus  = 0;
+//            
+//            self.initRedPacketWindow(info)
+//            
+//        }
+//    }
+//    
+//    func rewardBasedVideoAdDidReceive(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
+////        NSLog(@"Reward based video ad is received.");
+//        self.dismissLoading()
+//        if GADRewardBasedVideoAd.sharedInstance().isReady {
+//            GADRewardBasedVideoAd.sharedInstance().present(fromRootViewController: self)
+//        }else{
+//            self.showText("正在获取红包视频...")
+//            self.requestRewardedVideo()
+//        }
+//    }
+//    func rewardBasedVideoAdDidStartPlaying(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
+////        NSLog(@"admob奖励视频开始播放");
+//    }
+//    
+//    func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didFailToLoadWithError error: Error) {
+////        NSLog(@"Reward based video ad failed to load.");
+////        NSLog(@"admob奖励视频加载失败");
+//        self.showErrorText("视频加载失败")
+//     
+//    }
+//    
+//    func rewardBasedVideoAd(_ rewardBasedVideoAd: GADRewardBasedVideoAd, didRewardUserWith reward: GADAdReward) {
+////        NSLog(@"有效的播放admob奖励视频");
+//  
+//       
+//        
+//        isReward = true
+//    }
+//    
+//    func rewardBasedVideoAdWillLeaveApplication(_ rewardBasedVideoAd: GADRewardBasedVideoAd) {
+////        NSLog(@"点击admo奖励视频准备离开app");
+//    }
+//}

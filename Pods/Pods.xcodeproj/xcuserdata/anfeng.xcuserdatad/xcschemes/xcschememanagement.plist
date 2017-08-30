@@ -4,17 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>GoogleToolboxForMac.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-MyRedTask.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>SVProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SnapKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -29,40 +29,30 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>nanopb.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>00103D6C821BE85971C563025527BA5D</key>
+		<key>2C17147C33D5FF01B595605FE6375D0E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>580B59320F5C3E0A2145AACA16664838</key>
+		<key>3155788F410473B0D68D0BFCAD0BD68B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>909375177AC0ADD55F8F4798DE796259</key>
+		<key>4D48632FA09E7C7A52DD7958335D34E6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BE44EFF4DCCBD1CF0322F4140A0F68D6</key>
+		<key>6103604BDF92E0C39716AAC249A7F3C0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E4DD95323C54A78F879DAB0F1508B8E7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>ECBE109930DA9F2B267F4B77E51EC0E6</key>
+		<key>8EA6E493CD70F1BA1A97C044F38183AD</key>
 		<dict>
 			<key>primary</key>
 			<true/>

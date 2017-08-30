@@ -7,10 +7,10 @@
 //
 
 import UIKit
-import GoogleMobileAds
+//import GoogleMobileAds
 
 
-class MyMoneyViewController: UIViewController,GADInterstitialDelegate {
+class MyMoneyViewController: UIViewController {
     @IBOutlet weak var OneYuan: UIView!
     @IBOutlet weak var twoYuan: UIView!
     @IBOutlet weak var tishiLabel: UILabel!
@@ -19,7 +19,7 @@ class MyMoneyViewController: UIViewController,GADInterstitialDelegate {
     @IBOutlet weak var TakeButton: UIButton!
     @IBOutlet weak var MoneyButton: UIButton!
     
-    var interstitial = GADInterstitial.init(adUnitID: Aplication.sharedInstance.appModel.admob.admobOneInter)
+//    var interstitial = GADInterstitial.init(adUnitID: Aplication.sharedInstance.appModel.admob.admobOneInter)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,8 +53,8 @@ class MyMoneyViewController: UIViewController,GADInterstitialDelegate {
         priceLabel.text = "￥ \(Aplication.sharedInstance.myAllPrice())"
         // Do any additional setup after loading the view.
         
-        self.interstitial.load(GADRequest())
-        self.interstitial.delegate = self
+//        self.interstitial.load(GADRequest())
+//        self.interstitial.delegate = self
     }
     
 
@@ -103,34 +103,34 @@ class MyMoneyViewController: UIViewController,GADInterstitialDelegate {
         // Pass the selected object to the new view controller.
     }
     */
-    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
-        if self.interstitial.isReady {
-            self.interstitial.present(fromRootViewController: self)
-        }
-    }
-    
-    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
-        
-    }
-    
-    func interstitialWillDismissScreen(_ ad: GADInterstitial) {
-        
-    }
-    
-    func interstitialWillPresentScreen(_ ad: GADInterstitial) {
-        
-    }
-    
-    func interstitialWillLeaveApplication(_ ad: GADInterstitial) {
-        
-    }
-    
-    func interstitialDidFail(toPresentScreen ad: GADInterstitial) {
-        
-    }
-    
-    func interstitial(_ ad: GADInterstitial, didFailToReceiveAdWithError error: GADRequestError) {
-        
-    }
+//    func interstitialDidReceiveAd(_ ad: GADInterstitial) {
+//        if self.interstitial.isReady {
+//            self.interstitial.present(fromRootViewController: self)
+//        }
+//    }
+//    
+//    func interstitialDidDismissScreen(_ ad: GADInterstitial) {
+//        
+//    }
+//    
+//    func interstitialWillDismissScreen(_ ad: GADInterstitial) {
+//        
+//    }
+//    
+//    func interstitialWillPresentScreen(_ ad: GADInterstitial) {
+//        
+//    }
+//    
+//    func interstitialWillLeaveApplication(_ ad: GADInterstitial) {
+//        
+//    }
+//    
+//    func interstitialDidFail(toPresentScreen ad: GADInterstitial) {
+//        
+//    }
+//    
+//    func interstitial(_ ad: GADInterstitial, didFailToReceiveAdWithError error: GADRequestError) {
+//        
+//    }
 
 }
