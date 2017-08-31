@@ -16,4 +16,5 @@
 #import "AppModel.h"
 #import "RewardInfo.h"
 #import "UIViewController+RedPacket.h"
+#import <UMSocialCore/UMSocialCore.h>
 #endif /* Header_h */

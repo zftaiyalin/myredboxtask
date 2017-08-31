@@ -29,5 +29,5 @@
 
 - (void)cancelButtonClicked;
 
-
+-(void)showShareView;
 @end

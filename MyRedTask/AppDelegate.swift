@@ -18,6 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate,ScrollViewControllerDelega
         // Override point for customization after application launch.
         
         
+        UMSocialManager.default().openLog(true)
+        
+        UMSocialManager.default().umSocialAppkey = "59a76d0c4ad1562e4b000053"
+        
+        self.confitUShareSettings()
+        
                 TGSDK.initialize("d9m7OVx521c2651OX0YM") { ( success, tag, dic) in
                     if success {
                         print("yomob注册成功")
@@ -60,6 +66,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate,ScrollViewControllerDelega
         
         return true
     }
+    
+    func confitUShareSettings() {
+        UMSocialManager.default().setPlaform(.wechatSession, appKey: "", appSecret: "", redirectURL: nil)
+    }
+    
     func setFirstView() {
         let vc = ScrollViewController()
         vc.delegate = self
@@ -76,6 +87,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate,ScrollViewControllerDelega
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+    }
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        let result = UMSocialManager.default().handleOpen(url, sourceApplication: sourceApplication, annotation: annotation)
+        
+        if !result {
+            // 其他如支付等SDK的回调
+        }
+        
+        return result
     }
     
     func applicationDidEnterBackground(_ application: UIApplication) {

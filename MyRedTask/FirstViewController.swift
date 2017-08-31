@@ -11,6 +11,7 @@ import UIKit
 
 class FirstViewController: UIViewController {
 
+    @IBOutlet weak var yindaoView: UIView!
     @IBOutlet weak var priceLabel: UILabel!
 //    @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var mainButton: UIButton!
@@ -18,8 +19,17 @@ class FirstViewController: UIViewController {
     var isReward = false
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.yindaoView.isHidden = true
         self.title = "抢红包"
         // Do any additional setup after loading the view.
+        
+        let userDefaults = UserDefaults.standard
+        
+//        if !userDefaults.bool(forKey: "yindao"){
+                userDefaults.set(true, forKey: "yindao")
+                self.yindaoView.isHidden = false
+//        }
+        
     
         mainButton.layer.borderColor = UIColor.white.cgColor
         mainButton.layer.borderWidth = 5
@@ -42,6 +52,10 @@ class FirstViewController: UIViewController {
 //        TGSDK.
     }
 
+    @IBAction func shareWeiXin(_ sender: Any) {
+        
+        self.showShareView()
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -90,6 +104,10 @@ class FirstViewController: UIViewController {
         
     }
     
+    @IBAction func guanbiyindao(_ sender: Any) {
+        
+        self.yindaoView.isHidden = true
+    }
 //    广告单元名称： 激励
 //    广告单元 ID： ca-app-pub-3676267735536366/8535443029
     /*
