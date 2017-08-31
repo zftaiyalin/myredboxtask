@@ -74,7 +74,7 @@ class MyMoneyViewController: UIViewController {
     @IBAction func tixian(_ sender: Any) {
         
         if Aplication.sharedInstance.myAllPrice() > 30 {
-            self.showSuccessText("大神,添加工作微信提现！")
+            self.showSuccessText("大神,添加工作微信\(Aplication.sharedInstance.appModel.admob.weixin)提现！")
             
         }else{
             self.showErrorText("超过30元方可提现哦！")

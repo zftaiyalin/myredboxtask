@@ -54,21 +54,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate,ScrollViewControllerDelega
         
         let userDefaults = UserDefaults.standard
         
-//        if !userDefaults.bool(forKey: "isNoFirstLaunch"){
-//            userDefaults.set(true, forKey: "isNoFirstLaunch")
+        if !userDefaults.bool(forKey: "isNoFirstLaunch"){
+            userDefaults.set(true, forKey: "isNoFirstLaunch")
             setFirstView()
-//            }else{
-//                    let nvc = UINavigationController.init(rootViewController: FirstViewController())
-//                    window?.rootViewController = nvc
-//                    window?.makeKeyAndVisible()
-//                }
+            }else{
+                    let nvc = UINavigationController.init(rootViewController: FirstViewController())
+                    window?.rootViewController = nvc
+                    window?.makeKeyAndVisible()
+                }
         
         
         return true
     }
     
     func confitUShareSettings() {
-        UMSocialManager.default().setPlaform(.wechatSession, appKey: "", appSecret: "", redirectURL: nil)
+        UMSocialManager.default().setPlaform(.wechatSession, appKey: "wx4c4063090a2eff0a", appSecret: "wx4c4063090a2eff0a", redirectURL: nil)
     }
     
     func setFirstView() {

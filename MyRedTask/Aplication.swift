@@ -54,8 +54,14 @@ class Aplication: NSObject {
             let unarchiver = NSKeyedUnarchiver(forReadingWith: data)
             //通过归档时设置的关键字Checklist还原lists
             myMoneyList = unarchiver.decodeObject(forKey: "MoneyList") as! Array
+            
+            
             //结束解码
             unarchiver.finishDecoding()
+        }
+        
+        if myMoneyList == nil {
+            myMoneyList = [MoneyModel]()
         }
     }
     
@@ -120,7 +126,7 @@ class Aplication: NSObject {
         if self.myAllPrice() < Float(self.appModel.taskLevel.one) {
             let temp = Int(arc4random_uniform(100))+1
             
-            if temp < 75 {
+            if temp < 50 {
                 return 0.25
             }else{
                 return 0.5
@@ -130,10 +136,10 @@ class Aplication: NSObject {
            
             let temp = Int(arc4random_uniform(100))+1
             
-            if temp < 85 {
+            if temp < 75 {
                 return 0.25
             }else{
-                return 0.5
+                return 0.4
             }
         
             
@@ -141,7 +147,7 @@ class Aplication: NSObject {
             
             let temp = Int(arc4random_uniform(100))+1
             
-            if temp < 90 {
+            if temp < 85 {
                 return 0.15
             }else{
                 return 0.3

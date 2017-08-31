@@ -25,10 +25,10 @@ class FirstViewController: UIViewController {
         
         let userDefaults = UserDefaults.standard
         
-//        if !userDefaults.bool(forKey: "yindao"){
+        if !userDefaults.bool(forKey: "yindao"){
                 userDefaults.set(true, forKey: "yindao")
                 self.yindaoView.isHidden = false
-//        }
+        }
         
     
         mainButton.layer.borderColor = UIColor.white.cgColor
@@ -98,15 +98,53 @@ class FirstViewController: UIViewController {
         })
     }
     
+    
+    func shareSuccess() {
+        
+        //分享成功
+        let userDefaults = UserDefaults.standard
+        
+        if !userDefaults.bool(forKey: "share"){
+                userDefaults.set(true, forKey: "share")
+
+            let info = RewardInfo.init()
+            currentPrice = Double(2.0)
+            info.money         = Float(currentPrice);
+            info.rewardName    = "获得分享红包了！😊😊";
+            info.rewardContent = "恭喜你得到红包~";
+            info.rewardStatus  = 0;
+            
+            self.initRedPacketWindow(info)
+            
+        }
+
+        
+       
+        
+    }
     func shareButtonPress() {
         self.cancelButtonClicked()
-        TGSDK.showAd("Wk3OlqsRSBddoQY4LzP")
+        if TGSDK.couldShowAd(Aplication.sharedInstance.appModel.admob.admobReVideo) {
+            TGSDK.showAd(Aplication.sharedInstance.appModel.admob.admobReVideo)
+        }else{
+            TGSDK.showAd(Aplication.sharedInstance.appModel.admob.admobReVideo)
+            self.showText("正在加载任务视频~~")
+        }
         
     }
     
     @IBAction func guanbiyindao(_ sender: Any) {
         
         self.yindaoView.isHidden = true
+        
+        let info = RewardInfo.init()
+        currentPrice = Double(3.0)
+        info.money         = Float(currentPrice);
+        info.rewardName    = "获得首次登录红包了！😊😊";
+        info.rewardContent = "恭喜你得到红包~";
+        info.rewardStatus  = 0;
+        
+        self.initRedPacketWindow(info)
     }
 //    广告单元名称： 激励
 //    广告单元 ID： ca-app-pub-3676267735536366/8535443029
@@ -121,7 +159,13 @@ class FirstViewController: UIViewController {
     */
     @IBAction func tapQiang(_ sender: Any) {
 
-            TGSDK.showAd("Wk3OlqsRSBddoQY4LzP")
+        
+        if TGSDK.couldShowAd(Aplication.sharedInstance.appModel.admob.admobReVideo) {
+            TGSDK.showAd(Aplication.sharedInstance.appModel.admob.admobReVideo)
+        }else{
+            TGSDK.showAd(Aplication.sharedInstance.appModel.admob.admobReVideo)
+            self.showText("正在加载任务视频~~")
+        }
 
     }
     @IBAction func pushMyMoney(_ sender: Any) {

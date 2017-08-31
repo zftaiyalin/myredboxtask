@@ -69,9 +69,9 @@ class ScrollViewController: UIViewController,UIScrollViewDelegate {
         
         let button = UIButton()
         button.backgroundColor = UIColor.red
-        button.setTitle("抢走3元红包", for: UIControlState())
+        button.setTitle("进去抢红啦", for: UIControlState())
         button.setTitleColor(UIColor.white, for: .normal)
-        button.layer.cornerRadius = 7
+        button.layer.cornerRadius = 4
         button.addTarget(self, action: #selector(tapButton), for: .touchUpInside)
         imageViewfive.addSubview(button)
         
