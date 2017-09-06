@@ -1,0 +1,6 @@
+framework module Pods_MyRedTask {
+  umbrella header "Pods-MyRedTask-umbrella.h"
+
+  export *
+  module * { export * }
+}
