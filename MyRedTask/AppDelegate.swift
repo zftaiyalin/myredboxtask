@@ -32,7 +32,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate,ScrollViewControllerDelega
                     }
                 }
     
-        
+    /*
+    修改*/
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyyMMddHHmmss"
         let currentDateString = dateFormatter.string(from: Date.init())
@@ -49,16 +50,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate,ScrollViewControllerDelega
         }
         if content != nil {
             let model = AppModel.yy_model(withJSON: content)
+            model?.admob.isComment = true
             Aplication.sharedInstance.appModel = model
         }
         
         let userDefaults = UserDefaults.standard
         
+
+    
         if !userDefaults.bool(forKey: "isNoFirstLaunch"){
             userDefaults.set(true, forKey: "isNoFirstLaunch")
             setFirstView()
             }else{
                     let nvc = UINavigationController.init(rootViewController: FirstViewController())
+                    Aplication.sharedInstance.navigation = nvc
                     window?.rootViewController = nvc
                     window?.makeKeyAndVisible()
                 }
@@ -81,6 +86,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,ScrollViewControllerDelega
     
     func pushMainView(){
         let nvc = UINavigationController.init(rootViewController: FirstViewController())
+        Aplication.sharedInstance.navigation = nvc
         window?.rootViewController = nvc
         window?.makeKeyAndVisible()
     }
@@ -104,12 +110,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate,ScrollViewControllerDelega
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     }
     
+
+    
     func applicationWillEnterForeground(_ application: UIApplication) {
-        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+        // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.\
+        Aplication.sharedInstance.setPinglunStatus()
     }
     
     func applicationDidBecomeActive(_ application: UIApplication) {
         // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
     }
     
     func applicationWillTerminate(_ application: UIApplication) {

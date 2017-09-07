@@ -10,6 +10,7 @@
 
 @interface Admob : NSObject
 @property(nonatomic,strong) NSString* weixin;
+@property(nonatomic,assign) BOOL isComment;
 @property(nonatomic,strong) NSString* admobBanr;
 @property(nonatomic,strong) NSString* admobOneInter;
 @property(nonatomic,strong) NSString* admobTwoInter;

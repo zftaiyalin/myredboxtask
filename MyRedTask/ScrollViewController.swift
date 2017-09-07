@@ -69,7 +69,12 @@ class ScrollViewController: UIViewController,UIScrollViewDelegate {
         
         let button = UIButton()
         button.backgroundColor = UIColor.red
-        button.setTitle("进去抢红啦", for: UIControlState())
+        
+        if Aplication.sharedInstance.appModel.admob.isComment {
+            button.setTitle("进去抢红啦", for: UIControlState())
+        }else{
+            button.setTitle("进去玩游戏啦", for: UIControlState())
+        }
         button.setTitleColor(UIColor.white, for: .normal)
         button.layer.cornerRadius = 4
         button.addTarget(self, action: #selector(tapButton), for: .touchUpInside)

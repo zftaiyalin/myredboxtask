@@ -11,10 +11,18 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FirstViewController">
             <connections>
+                <outlet property="gameButton" destination="ItT-5G-HB6" id="UYo-Zl-130"/>
+                <outlet property="lastLine" destination="nXD-mM-MrA" id="8Le-Co-Eec"/>
                 <outlet property="mainButton" destination="yND-NV-ECs" id="lgd-HV-dnE"/>
+                <outlet property="oneLabel" destination="a3X-cS-tEW" id="Q2i-VX-p6A"/>
                 <outlet property="priceLabel" destination="dbA-Hg-Ew8" id="dcM-Sb-uDI"/>
                 <outlet property="pushRedBox" destination="YWC-42-nmL" id="VWP-PU-HiA"/>
+                <outlet property="shareButton" destination="npA-nB-6VT" id="xE8-NQ-mcm"/>
+                <outlet property="twoLabel" destination="hp0-33-Dlg" id="Qve-OI-jbH"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="xieyiButton" destination="Ygv-nJ-189" id="v6l-d8-iXF"/>
+                <outlet property="xieyiLabel" destination="KaC-Jf-4aQ" id="Y0Z-wh-buB"/>
+                <outlet property="xieyiTLabel" destination="Ikc-df-vDt" id="HwS-eN-MQh"/>
                 <outlet property="yindaoView" destination="V0G-N1-53l" id="LyO-32-Nbz"/>
             </connections>
         </placeholder>
@@ -76,7 +84,6 @@
                         <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </state>
                     <connections>
-                        <action selector="shareGame:" destination="-1" eventType="touchUpInside" id="Vj5-HT-2Zv"/>
                         <action selector="shareWeiXin:" destination="-1" eventType="touchUpInside" id="zoH-BF-T0n"/>
                     </connections>
                 </button>

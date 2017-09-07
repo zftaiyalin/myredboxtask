@@ -18,12 +18,21 @@ class MyMoneyViewController: UIViewController {
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var TakeButton: UIButton!
     @IBOutlet weak var MoneyButton: UIButton!
+    @IBOutlet weak var setButton: UIButton!
     
 //    var interstitial = GADInterstitial.init(adUnitID: Aplication.sharedInstance.appModel.admob.admobOneInter)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "我的红包"
+        if Aplication.sharedInstance.appModel.admob.isComment {
+            self.title = "我的红包"
+            self.navigationItem.setRightBarButton(UIBarButtonItem.init(title: "红包明细", style: .done, target: self, action: #selector(pushTakeView)), animated: true)
+            priceLabel.text = "￥ \(Aplication.sharedInstance.myAllPrice())"
+        }else{
+            self.title = "我的积分"
+            priceLabel.text = "\(Aplication.sharedInstance.myAllPrice())"
+        }
+        
         self.navigationController?.navigationBar.barTintColor = UIColor.black
         
         self.navigationController?.navigationBar.tintColor = UIColor.white
@@ -31,7 +40,14 @@ class MyMoneyViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
 
         
-        self.navigationItem.setRightBarButton(UIBarButtonItem.init(title: "红包明细", style: .done, target: self, action: #selector(pushTakeView)), animated: true)
+        
+        
+        if !Aplication.sharedInstance.appModel.admob.isComment {
+            setButton.isHidden = true
+            tishiLabel.text = "我的游戏总积分"
+            TakeButton.setTitle("继续玩游戏", for: .normal)
+            MoneyButton.setTitle("积分详情", for: .normal)
+        }
         
         self.OneYuan.layer.cornerRadius = 54
             
@@ -42,15 +58,15 @@ class MyMoneyViewController: UIViewController {
         MoneyButton.layer.cornerRadius = 4
         
         
-        TakeButton.layer.borderColor = UIColor.init(hexString: "#209e1f")?.cgColor
+        TakeButton.layer.borderColor = UIColor(rgba: "#209e1f").cgColor
         
         TakeButton.layer.borderWidth = 0.5
         
-        MoneyButton.layer.borderColor = UIColor.init(hexString: "#dfdfdf")?.cgColor
+        MoneyButton.layer.borderColor = UIColor(rgba: "#dfdfdf").cgColor
         
         MoneyButton.layer.borderWidth = 0.5
         
-        priceLabel.text = "￥ \(Aplication.sharedInstance.myAllPrice())"
+        
         // Do any additional setup after loading the view.
         
 //        self.interstitial.load(GADRequest())
@@ -72,13 +88,18 @@ class MyMoneyViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     @IBAction func tixian(_ sender: Any) {
-        
-        if Aplication.sharedInstance.myAllPrice() > 30 {
-            self.showSuccessText("大神,添加工作微信\(Aplication.sharedInstance.appModel.admob.weixin)提现！")
-            
+        if Aplication.sharedInstance.appModel.admob.isComment {
+            if Aplication.sharedInstance.myAllPrice() > 30 {
+                self.showSuccessText("大神,添加工作微信\(Aplication.sharedInstance.appModel.admob.weixin)提现！")
+                
+            }else{
+                self.showErrorText("超过30元方可提现哦！")
+            }
         }else{
-            self.showErrorText("超过30元方可提现哦！")
+            self.navigationController?.pushViewController(TakeMoneyViewController(), animated: true)
+
         }
+        
     }
     
     @IBAction func pushAccount(_ sender: Any) {

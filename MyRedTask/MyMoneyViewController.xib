@@ -15,6 +15,7 @@
                 <outlet property="OneYuan" destination="cY3-kj-aIV" id="LuQ-5q-5ta"/>
                 <outlet property="TakeButton" destination="utP-yl-ptY" id="Yx0-2d-cSF"/>
                 <outlet property="priceLabel" destination="8sZ-Lz-TXo" id="N80-c6-MHe"/>
+                <outlet property="setButton" destination="OKC-2u-2aj" id="kav-KD-Ok8"/>
                 <outlet property="tishiLabel" destination="szB-lc-SGh" id="rGw-Sy-hWd"/>
                 <outlet property="twoYuan" destination="540-Jc-cJg" id="gkc-Yk-GoS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

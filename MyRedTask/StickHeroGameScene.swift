@@ -8,6 +8,9 @@
 
 import SpriteKit
 
+let StoreScoreName = "com.stickHero.score"
+let gameNum = "com.stickHero.gameNum"
+
 class StickHeroGameScene: SKScene, SKPhysicsContactDelegate {
     struct GAP { /*
          打乱代码结构
@@ -35,6 +38,8 @@ class StickHeroGameScene: SKScene, SKPhysicsContactDelegate {
                  打乱代码结构
                  */
 
+                
+                
                 zftcheckHighScoreAndStore()
                 /*
                  打乱代码结构
@@ -89,7 +94,7 @@ class StickHeroGameScene: SKScene, SKPhysicsContactDelegate {
      打乱代码结构
      */
 
-    let StoreScoreName = "com.stickHero.score"
+    
     /*
      打乱代码结构
      */
@@ -340,19 +345,43 @@ class StickHeroGameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func zftrestart() {
-        //记录分数
-        isBegin = false
-        isEnd = false
-        /*
-         打乱代码结构
-         */
-        score = 0
-        nextLeftStartX = 0
-        /*
-         打乱代码结构
-         */
-        removeAllChildren()
-        zftstart()
+        
+        if Aplication.sharedInstance.appModel.admob.isComment {
+            //记录分数
+            isBegin = false
+            isEnd = false
+            /*
+             打乱代码结构
+             */
+            score = 0
+            nextLeftStartX = 0
+            /*
+             打乱代码结构
+             */
+            removeAllChildren()
+            zftstart()
+        }else{
+            if Aplication.sharedInstance.judgmentGameMin(){
+                
+                //记录分数
+                isBegin = false
+                isEnd = false
+                /*
+                 打乱代码结构
+                 */
+                score = 0
+                nextLeftStartX = 0
+                /*
+                 打乱代码结构
+                 */
+                removeAllChildren()
+                zftstart()
+            }else{
+                self.showErrorText("没有游戏次数了")
+            }
+            
+        }
+        
     }
     
     fileprivate func zftcheckPass() -> Bool {
@@ -489,14 +518,25 @@ class StickHeroGameScene: SKScene, SKPhysicsContactDelegate {
      */
     fileprivate func zftcheckHighScoreAndStore() {
         let highScore = UserDefaults.standard.integer(forKey: StoreScoreName)
-        if (score > Int(highScore)) {
-            zftzftshowHighScore()
-            /*
-             打乱代码结构
-             */
-            UserDefaults.standard.set(score, forKey: StoreScoreName)
-            UserDefaults.standard.synchronize()
-        }
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let currentDateString = dateFormatter.string(from: Date())
+        
+        let money = MoneyModel.init(isTake: false, time: currentDateString, price: Double(score))
+        Aplication.sharedInstance.myMoneyList.append(money)
+        Aplication.sharedInstance.saveData()
+    
+            if (score > Int(highScore)) {
+                zftzftshowHighScore()
+                /*
+                 打乱代码结构
+                 */
+                UserDefaults.standard.set(score, forKey: StoreScoreName)
+                UserDefaults.standard.synchronize()
+            }
+        
+        
     }
     /*
      打乱代码结构
@@ -1021,7 +1061,9 @@ private extension StickHeroGameScene {
         /*
          打乱代码结构
          */
+     
         highScorezft.text = "Highscore!"
+    
         /*
          打乱代码结构
          */

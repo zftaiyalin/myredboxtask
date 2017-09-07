@@ -224,17 +224,17 @@ static const void *RewardInfoKey = &RewardInfoKey;
             UMSocialLogInfo(@"************Share fail with error %@*********",error);
         }else{
             if ([data isKindOfClass:[UMSocialShareResponse class]]) {
-                UMSocialShareResponse *resp = data;
+//                UMSocialShareResponse *resp = data;
                 //分享结果消息
-                UMSocialLogInfo(@"response message is %@",resp.message);
+//                UMSocialLogInfo(@"response message is %@",resp.message);
                 //第三方原始返回的数据
-                UMSocialLogInfo(@"response originalResponse data is %@",resp.originalResponse);
+//                UMSocialLogInfo(@"response originalResponse data is %@",resp.originalResponse);
                 
                 
                 [self performSelector:@selector(shareSuccess) withObject:nil afterDelay:0.0];
                 
             }else{
-                UMSocialLogInfo(@"response data is %@",data);
+//                UMSocialLogInfo(@"response data is %@",data);
             }
         }
         [self showErrorText:error.domain];
@@ -245,11 +245,11 @@ static const void *RewardInfoKey = &RewardInfoKey;
     //创建分享消息对象
     UMSocialMessageObject *messageObject = [UMSocialMessageObject messageObject];
     
-    //创建网页内容对象
-    NSString* thumbURL =  @"https://mobile.umeng.com/images/pic/home/social/img-1.png";
-    UMShareWebpageObject *shareObject = [UMShareWebpageObject shareObjectWithTitle:@"欢迎使用【友盟+】社会化组件U-Share" descr:@"欢迎使用【友盟+】社会化组件U-Share，SDK包最小，集成成本最低，助力您的产品开发、运营与推广！" thumImage:thumbURL];
+    UIImage *im = [UIImage imageNamed:@"icon-83.5.png"];
+    
+    UMShareWebpageObject *shareObject = [UMShareWebpageObject shareObjectWithTitle:@"网赚红包，一个能赚取红包的手机APP！😥一下抢了那么多红包，求解救！😂😂" descr:@"网赚红包，一个能赚取红包的app！😥一下抢了那么多红包，求解救！😂😂" thumImage:im];
     //设置网页地址
-    shareObject.webpageUrl = @"http://mobile.umeng.com/social";
+    shareObject.webpageUrl = @"https://itunes.apple.com/cn/app/id1276938626";
     
     //分享消息对象设置分享内容对象
     messageObject.shareObject = shareObject;
@@ -262,12 +262,12 @@ static const void *RewardInfoKey = &RewardInfoKey;
             if ([data isKindOfClass:[UMSocialShareResponse class]]) {
                 UMSocialShareResponse *resp = data;
                 //分享结果消息
-                UMSocialLogInfo(@"response message is %@",resp.message);
+//                UMSocialLogInfo(@"response message is %@",resp.message);
                 //第三方原始返回的数据
-                UMSocialLogInfo(@"response originalResponse data is %@",resp.originalResponse);
-                
+//                UMSocialLogInfo(@"response originalResponse data is %@",resp.originalResponse);
+                 [self performSelector:@selector(shareSuccess) withObject:nil afterDelay:0.0];
             }else{
-                UMSocialLogInfo(@"response data is %@",data);
+//                UMSocialLogInfo(@"response data is %@",data);
             }
         }
         [self showErrorText:error.domain];

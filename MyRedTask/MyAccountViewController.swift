@@ -28,8 +28,8 @@ class MyAccountViewController: UIViewController {
         super.viewDidLoad()
         self.title = "账户设置"
         self.view.clipsToBounds = true
-        self.zhifubao.layer.borderColor = UIColor.init(hexString: "#dfdfdf")?.cgColor
-        self.weixin.layer.borderColor = UIColor.init(hexString: "#dfdfdf")?.cgColor
+        self.zhifubao.layer.borderColor = UIColor(rgba: "#dfdfdf").cgColor
+        self.weixin.layer.borderColor = UIColor(rgba: "#dfdfdf").cgColor
         self.zhifubao.layer.borderWidth = 0.3
         self.weixin.layer.borderWidth = 0.3
 //        self.interstitial.load(GADRequest())

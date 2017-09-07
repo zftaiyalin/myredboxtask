@@ -25,6 +25,7 @@
 		6B2BF0981F4EDBF9008AE662 /* NSObject+ALiHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B2BF0971F4EDBF9008AE662 /* NSObject+ALiHUD.m */; };
 		6B7158EB1F57B2FB00E04E0E /* IMG_0557.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 6B7158EA1F57B2FB00E04E0E /* IMG_0557.JPG */; };
 		6B7158ED1F57B41F00E04E0E /* icon-83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B7158EC1F57B41F00E04E0E /* icon-83.5@2x.png */; };
+		6B784B6E1F60E4550087DBC1 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B784B6D1F60E4550087DBC1 /* GameModel.swift */; };
 		6B7DFF7D1F4D1801002CA103 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7DFF7C1F4D1801002CA103 /* AppDelegate.swift */; };
 		6B7DFF7F1F4D1801002CA103 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7DFF7E1F4D1801002CA103 /* ViewController.swift */; };
 		6B7DFF841F4D1801002CA103 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B7DFF831F4D1801002CA103 /* Assets.xcassets */; };
@@ -67,6 +68,7 @@
 		6BA510791F4D1F320054ECA6 /* IMG_0504.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 6BA510781F4D1F320054ECA6 /* IMG_0504.JPG */; };
 		6BA510801F4D23F70054ECA6 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA5107E1F4D23F70054ECA6 /* FirstViewController.swift */; };
 		6BA510811F4D23F70054ECA6 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BA5107F1F4D23F70054ECA6 /* FirstViewController.xib */; };
+		6BAB2E3B1F5901DB00416EA0 /* ExtensionSwiftClassUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAB2E3A1F5901DB00416EA0 /* ExtensionSwiftClassUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +106,7 @@
 		6B2BF0971F4EDBF9008AE662 /* NSObject+ALiHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ALiHUD.m"; sourceTree = "<group>"; };
 		6B7158EA1F57B2FB00E04E0E /* IMG_0557.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0557.JPG; sourceTree = "<group>"; };
 		6B7158EC1F57B41F00E04E0E /* icon-83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-83.5@2x.png"; sourceTree = "<group>"; };
+		6B784B6D1F60E4550087DBC1 /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		6B785B6F1F56A94E003C5F3E /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = Pods/TGSDK/TGSDK/frameworks/GoogleMobileAds.framework; sourceTree = "<group>"; };
 		6B7DFF791F4D1801002CA103 /* MyRedTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyRedTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B7DFF7C1F4D1801002CA103 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -154,6 +157,7 @@
 		6BA510781F4D1F320054ECA6 /* IMG_0504.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0504.JPG; sourceTree = "<group>"; };
 		6BA5107E1F4D23F70054ECA6 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		6BA5107F1F4D23F70054ECA6 /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
+		6BAB2E3A1F5901DB00416EA0 /* ExtensionSwiftClassUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionSwiftClassUtil.swift; sourceTree = "<group>"; };
 		BA2424C3D4D656E2442B97F5 /* Pods-MyRedTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRedTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyRedTask/Pods-MyRedTask.release.xcconfig"; sourceTree = "<group>"; };
 		E261B0459EC10852609BDAA1 /* Pods-MyRedTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRedTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyRedTask/Pods-MyRedTask.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -254,6 +258,7 @@
 				6B8E68221F50244700187DBF /* MyMoneyTableViewCell.swift */,
 				6B8E68231F50244700187DBF /* MyMoneyTableViewCell.xib */,
 				6B8E68261F50251800187DBF /* MoneyModel.swift */,
+				6BAB2E3A1F5901DB00416EA0 /* ExtensionSwiftClassUtil.swift */,
 				6B1658B91F54065C00B5EE0C /* MyAccountViewController.swift */,
 				6B1658BA1F54065C00B5EE0C /* MyAccountViewController.xib */,
 				6B1658BD1F5409C400B5EE0C /* SettingMyAccountViewController.swift */,
@@ -263,6 +268,7 @@
 				6B8E68091F4FBE9700187DBF /* GameViewController.swift */,
 				6B8E680A1F4FBE9700187DBF /* StickHeroGameScene.swift */,
 				6B8E680B1F4FBE9700187DBF /* Tools.swift */,
+				6B784B6D1F60E4550087DBC1 /* GameModel.swift */,
 				6B1658AB1F53C80600B5EE0C /* OCTool.h */,
 				6B1658AC1F53C80600B5EE0C /* OCTool.m */,
 				6B8403AE1F5571FC00F6DAD0 /* AppModel.h */,
@@ -553,9 +559,11 @@
 				6B8E68291F5026C300187DBF /* Aplication.swift in Sources */,
 				6B1658BB1F54065C00B5EE0C /* MyAccountViewController.swift in Sources */,
 				6B8403AD1F5565E000F6DAD0 /* ScrollViewController.swift in Sources */,
+				6B784B6E1F60E4550087DBC1 /* GameModel.swift in Sources */,
 				6B1658B31F53EF3D00B5EE0C /* RewardInfo.m in Sources */,
 				6B8E68241F50244700187DBF /* MyMoneyTableViewCell.swift in Sources */,
 				6B8403B31F55720E00F6DAD0 /* TaskLevel.m in Sources */,
+				6BAB2E3B1F5901DB00416EA0 /* ExtensionSwiftClassUtil.swift in Sources */,
 				6B8E68271F50251800187DBF /* MoneyModel.swift in Sources */,
 				6B2BF08E1F4EDB18008AE662 /* ALiProgressHUD.m in Sources */,
 				6B1658BF1F5409C400B5EE0C /* SettingMyAccountViewController.swift in Sources */,

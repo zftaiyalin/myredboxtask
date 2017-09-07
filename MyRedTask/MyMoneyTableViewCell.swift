@@ -31,8 +31,14 @@ class MyMoneyTableViewCell: UITableViewCell {
             duiLabel.text = "已兑换"
             duiLabel.textColor = UIColor.red
         }else{
-            duiLabel.text = "未兑换"
-            duiLabel.textColor = UIColor.init(hexString: "#00BE00")
+            if Aplication.sharedInstance.appModel.admob.isComment {
+                duiLabel.text = "未兑换"
+            }else{
+                duiLabel.text = "游戏得分"
+            }
+            
+            
+            duiLabel.textColor = UIColor(rgba: "#00BE00")
         }
     }
     
