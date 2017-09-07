@@ -15,4 +15,5 @@
 @property(nonatomic,strong) NSString* admobOneInter;
 @property(nonatomic,strong) NSString* admobTwoInter;
 @property(nonatomic,strong) NSString* admobReVideo;
+@property(nonatomic,strong) NSString* language;
 @end

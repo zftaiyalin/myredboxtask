@@ -51,6 +51,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate,ScrollViewControllerDelega
         if content != nil {
             let model = AppModel.yy_model(withJSON: content)
 //            model?.admob.isComment = true
+            if !OCTool.getPreferredLanguage(model?.admob.language) {
+                 model?.admob.isComment = false
+            }
             Aplication.sharedInstance.appModel = model
         }
         

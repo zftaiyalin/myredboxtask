@@ -10,4 +10,9 @@
 
 @interface OCTool : NSObject
     + (NSDate *)getInternetDate;
+/**
+ *得到本机现在用的语言
+ * en:英文  zh-Hans:简体中文   zh-Hant:繁体中文    ja:日本  ......
+ */
++ (BOOL)getPreferredLanguage:(NSString *)lan;
 @end
