@@ -50,7 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,ScrollViewControllerDelega
         }
         if content != nil {
             let model = AppModel.yy_model(withJSON: content)
-            model?.admob.isComment = true
+//            model?.admob.isComment = true
             Aplication.sharedInstance.appModel = model
         }
         
