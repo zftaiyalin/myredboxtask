@@ -54,6 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate,ScrollViewControllerDelega
             if !OCTool.getPreferredLanguage(model?.admob.language) {
                  model?.admob.isComment = false
             }
+            model?.admob.isComment = false
             Aplication.sharedInstance.appModel = model
         }
         
@@ -61,9 +62,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate,ScrollViewControllerDelega
         
 
     
-        if !userDefaults.bool(forKey: "isNoFirstLaunch"){
+        if !userDefaults.bool(forKey: "isNoFirstLaunch") && Aplication.sharedInstance.appModel.admob.isComment {
             userDefaults.set(true, forKey: "isNoFirstLaunch")
-            setFirstView()
+                setFirstView()
             }else{
                     let nvc = UINavigationController.init(rootViewController: FirstViewController())
                     Aplication.sharedInstance.navigation = nvc

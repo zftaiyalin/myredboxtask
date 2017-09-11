@@ -27,7 +27,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NZ0-FH-tmy">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="130"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="抢到红包啦~~~" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fig-mr-MQl">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="快加入进来吧~~~" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fig-mr-MQl">
                                         <rect key="frame" x="102" y="64" width="209" height="58"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -43,42 +43,30 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wJx-xQ-Njg">
                                 <rect key="frame" x="0.0" y="487" width="375" height="180"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-83.5.png" translatesAutoresizingMaskIntoConstraints="NO" id="4gd-Gc-5CP">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1505116440.png" translatesAutoresizingMaskIntoConstraints="NO" id="4gd-Gc-5CP">
                                         <rect key="frame" x="40" y="50.5" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="MSi-me-3Nf"/>
                                             <constraint firstAttribute="width" constant="80" id="OQW-lh-uHD"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="赚红包 快乐赚" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jok-In-BcG">
-                                        <rect key="frame" x="120" y="70" width="255" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="简单赚钱  快乐生活" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bla-CO-uVD">
+                                        <rect key="frame" x="141" y="80" width="169" height="21"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="20" id="sE5-rc-M0R"/>
+                                            <constraint firstAttribute="height" constant="21" id="IqN-4M-hzp"/>
+                                            <constraint firstAttribute="width" constant="169" id="RVa-wt-dEd"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                        <color key="textColor" red="0.93709164860000005" green="0.93694382909999996" blue="0.95754462480000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="简单赚钱      快乐生活" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nXk-Lf-FO1">
-                                        <rect key="frame" x="120" y="98" width="255" height="21"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="21" id="axj-rs-YQQ"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" red="0.93709164860000005" green="0.93694382909999996" blue="0.95754462480000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" red="0.57191147749799165" green="0.094717539972615158" blue="0.035689957854916132" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="4gd-Gc-5CP" firstAttribute="centerY" secondItem="wJx-xQ-Njg" secondAttribute="centerY" id="J9s-Ad-q2H"/>
-                                    <constraint firstItem="jok-In-BcG" firstAttribute="leading" secondItem="4gd-Gc-5CP" secondAttribute="trailing" id="KHw-Sj-848"/>
-                                    <constraint firstItem="nXk-Lf-FO1" firstAttribute="leading" secondItem="4gd-Gc-5CP" secondAttribute="trailing" id="Mw9-v6-FkT"/>
                                     <constraint firstItem="4gd-Gc-5CP" firstAttribute="leading" secondItem="wJx-xQ-Njg" secondAttribute="leading" constant="40" id="N8f-eR-gPw"/>
-                                    <constraint firstItem="nXk-Lf-FO1" firstAttribute="top" secondItem="jok-In-BcG" secondAttribute="bottom" constant="8" id="Rub-7S-yul"/>
-                                    <constraint firstAttribute="trailing" secondItem="nXk-Lf-FO1" secondAttribute="trailing" id="pz5-W5-RZz"/>
-                                    <constraint firstItem="jok-In-BcG" firstAttribute="top" secondItem="wJx-xQ-Njg" secondAttribute="top" constant="70" id="uYa-50-ChV"/>
-                                    <constraint firstAttribute="trailing" secondItem="jok-In-BcG" secondAttribute="trailing" id="vXx-Lo-BW9"/>
+                                    <constraint firstItem="bla-CO-uVD" firstAttribute="leading" secondItem="4gd-Gc-5CP" secondAttribute="trailing" constant="21" id="jLu-Cz-AMB"/>
+                                    <constraint firstItem="bla-CO-uVD" firstAttribute="centerY" secondItem="4gd-Gc-5CP" secondAttribute="centerY" id="zl3-Za-OfX"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -104,7 +92,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="1505116440.png" width="167" height="167"/>
         <image name="IMG_0557.JPG" width="1080" height="1920"/>
-        <image name="icon-83.5.png" width="83" height="83"/>
     </resources>
 </document>

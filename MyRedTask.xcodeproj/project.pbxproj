@@ -24,7 +24,6 @@
 		6B2BF0941F4EDB18008AE662 /* HUD_success@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B2BF08D1F4EDB18008AE662 /* HUD_success@3x.png */; };
 		6B2BF0981F4EDBF9008AE662 /* NSObject+ALiHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B2BF0971F4EDBF9008AE662 /* NSObject+ALiHUD.m */; };
 		6B7158EB1F57B2FB00E04E0E /* IMG_0557.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 6B7158EA1F57B2FB00E04E0E /* IMG_0557.JPG */; };
-		6B7158ED1F57B41F00E04E0E /* icon-83.5@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B7158EC1F57B41F00E04E0E /* icon-83.5@2x.png */; };
 		6B784B6E1F60E4550087DBC1 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B784B6D1F60E4550087DBC1 /* GameModel.swift */; };
 		6B7DFF7D1F4D1801002CA103 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7DFF7C1F4D1801002CA103 /* AppDelegate.swift */; };
 		6B7DFF7F1F4D1801002CA103 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B7DFF7E1F4D1801002CA103 /* ViewController.swift */; };
@@ -38,6 +37,7 @@
 		6B8403B01F5571FC00F6DAD0 /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8403AF1F5571FC00F6DAD0 /* AppModel.m */; };
 		6B8403B31F55720E00F6DAD0 /* TaskLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8403B21F55720E00F6DAD0 /* TaskLevel.m */; };
 		6B8403B61F55721A00F6DAD0 /* Admob.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8403B51F55721A00F6DAD0 /* Admob.m */; };
+		6B86780B1F66788100ACE6C0 /* 1505116440.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B86780A1F66788100ACE6C0 /* 1505116440.png */; };
 		6B8E67F81F4FBE8600187DBF /* button_retry_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B8E67E61F4FBE8600187DBF /* button_retry_down.png */; };
 		6B8E67F91F4FBE8600187DBF /* button_retry_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B8E67E71F4FBE8600187DBF /* button_retry_up.png */; };
 		6B8E67FA1F4FBE8600187DBF /* human1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B8E67E81F4FBE8600187DBF /* human1.png */; };
@@ -105,7 +105,6 @@
 		6B2BF0961F4EDBF9008AE662 /* NSObject+ALiHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ALiHUD.h"; sourceTree = "<group>"; };
 		6B2BF0971F4EDBF9008AE662 /* NSObject+ALiHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ALiHUD.m"; sourceTree = "<group>"; };
 		6B7158EA1F57B2FB00E04E0E /* IMG_0557.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0557.JPG; sourceTree = "<group>"; };
-		6B7158EC1F57B41F00E04E0E /* icon-83.5@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-83.5@2x.png"; sourceTree = "<group>"; };
 		6B784B6D1F60E4550087DBC1 /* GameModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		6B785B6F1F56A94E003C5F3E /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = Pods/TGSDK/TGSDK/frameworks/GoogleMobileAds.framework; sourceTree = "<group>"; };
 		6B7DFF791F4D1801002CA103 /* MyRedTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyRedTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,6 +126,7 @@
 		6B8403B21F55720E00F6DAD0 /* TaskLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskLevel.m; sourceTree = "<group>"; };
 		6B8403B41F55721A00F6DAD0 /* Admob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Admob.h; sourceTree = "<group>"; };
 		6B8403B51F55721A00F6DAD0 /* Admob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Admob.m; sourceTree = "<group>"; };
+		6B86780A1F66788100ACE6C0 /* 1505116440.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1505116440.png; sourceTree = "<group>"; };
 		6B8E67E61F4FBE8600187DBF /* button_retry_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_retry_down.png; sourceTree = "<group>"; };
 		6B8E67E71F4FBE8600187DBF /* button_retry_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_retry_up.png; sourceTree = "<group>"; };
 		6B8E67E81F4FBE8600187DBF /* human1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = human1.png; sourceTree = "<group>"; };
@@ -280,7 +280,7 @@
 				6BA510781F4D1F320054ECA6 /* IMG_0504.JPG */,
 				6B7158EA1F57B2FB00E04E0E /* IMG_0557.JPG */,
 				6B7DFF831F4D1801002CA103 /* Assets.xcassets */,
-				6B7158EC1F57B41F00E04E0E /* icon-83.5@2x.png */,
+				6B86780A1F66788100ACE6C0 /* 1505116440.png */,
 				6B7DFF851F4D1801002CA103 /* LaunchScreen.storyboard */,
 				6B7DFF881F4D1801002CA103 /* Info.plist */,
 			);
@@ -454,8 +454,8 @@
 				6B8E68151F5014F200187DBF /* TakeMoneyViewController.xib in Resources */,
 				6B8403A91F555E9100F6DAD0 /* WebViewController.xib in Resources */,
 				6B8E681B1F50167000187DBF /* MyMoneyViewController.xib in Resources */,
-				6B7158ED1F57B41F00E04E0E /* icon-83.5@2x.png in Resources */,
 				6B2BF0911F4EDB18008AE662 /* HUD_info@2x.png in Resources */,
+				6B86780B1F66788100ACE6C0 /* 1505116440.png in Resources */,
 				6B8E67F91F4FBE8600187DBF /* button_retry_up.png in Resources */,
 				6B8E68001F4FBE8600187DBF /* zftbg_country.mp3 in Resources */,
 				6B8E67FF1F4FBE8600187DBF /* starParticle.png in Resources */,
@@ -723,7 +723,7 @@
 					"$(inherited)",
 					"\"${PODS_ROOT}/TGSDK/TGSDK\"/**",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.anfeng.MyRedTask;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anfeng.redboxmoney;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Header.h";
 				SWIFT_VERSION = 3.0;
@@ -755,7 +755,7 @@
 					"$(inherited)",
 					"\"${PODS_ROOT}/TGSDK/TGSDK\"/**",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.anfeng.MyRedTask;
+				PRODUCT_BUNDLE_IDENTIFIER = com.anfeng.redboxmoney;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Header.h";
 				SWIFT_VERSION = 3.0;
