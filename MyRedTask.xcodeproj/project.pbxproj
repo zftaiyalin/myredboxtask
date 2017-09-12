@@ -37,7 +37,6 @@
 		6B8403B01F5571FC00F6DAD0 /* AppModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8403AF1F5571FC00F6DAD0 /* AppModel.m */; };
 		6B8403B31F55720E00F6DAD0 /* TaskLevel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8403B21F55720E00F6DAD0 /* TaskLevel.m */; };
 		6B8403B61F55721A00F6DAD0 /* Admob.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B8403B51F55721A00F6DAD0 /* Admob.m */; };
-		6B86780B1F66788100ACE6C0 /* 1505116440.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B86780A1F66788100ACE6C0 /* 1505116440.png */; };
 		6B8E67F81F4FBE8600187DBF /* button_retry_down.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B8E67E61F4FBE8600187DBF /* button_retry_down.png */; };
 		6B8E67F91F4FBE8600187DBF /* button_retry_up.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B8E67E71F4FBE8600187DBF /* button_retry_up.png */; };
 		6B8E67FA1F4FBE8600187DBF /* human1.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B8E67E81F4FBE8600187DBF /* human1.png */; };
@@ -69,6 +68,7 @@
 		6BA510801F4D23F70054ECA6 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BA5107E1F4D23F70054ECA6 /* FirstViewController.swift */; };
 		6BA510811F4D23F70054ECA6 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BA5107F1F4D23F70054ECA6 /* FirstViewController.xib */; };
 		6BAB2E3B1F5901DB00416EA0 /* ExtensionSwiftClassUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BAB2E3A1F5901DB00416EA0 /* ExtensionSwiftClassUtil.swift */; };
+		6BF187191F678AA8009A7419 /* lunicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BF187181F678AA8009A7419 /* lunicon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,7 +126,6 @@
 		6B8403B21F55720E00F6DAD0 /* TaskLevel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TaskLevel.m; sourceTree = "<group>"; };
 		6B8403B41F55721A00F6DAD0 /* Admob.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Admob.h; sourceTree = "<group>"; };
 		6B8403B51F55721A00F6DAD0 /* Admob.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Admob.m; sourceTree = "<group>"; };
-		6B86780A1F66788100ACE6C0 /* 1505116440.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1505116440.png; sourceTree = "<group>"; };
 		6B8E67E61F4FBE8600187DBF /* button_retry_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_retry_down.png; sourceTree = "<group>"; };
 		6B8E67E71F4FBE8600187DBF /* button_retry_up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_retry_up.png; sourceTree = "<group>"; };
 		6B8E67E81F4FBE8600187DBF /* human1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = human1.png; sourceTree = "<group>"; };
@@ -158,6 +157,7 @@
 		6BA5107E1F4D23F70054ECA6 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		6BA5107F1F4D23F70054ECA6 /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 		6BAB2E3A1F5901DB00416EA0 /* ExtensionSwiftClassUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionSwiftClassUtil.swift; sourceTree = "<group>"; };
+		6BF187181F678AA8009A7419 /* lunicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lunicon.png; sourceTree = "<group>"; };
 		BA2424C3D4D656E2442B97F5 /* Pods-MyRedTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRedTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyRedTask/Pods-MyRedTask.release.xcconfig"; sourceTree = "<group>"; };
 		E261B0459EC10852609BDAA1 /* Pods-MyRedTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyRedTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyRedTask/Pods-MyRedTask.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -280,7 +280,7 @@
 				6BA510781F4D1F320054ECA6 /* IMG_0504.JPG */,
 				6B7158EA1F57B2FB00E04E0E /* IMG_0557.JPG */,
 				6B7DFF831F4D1801002CA103 /* Assets.xcassets */,
-				6B86780A1F66788100ACE6C0 /* 1505116440.png */,
+				6BF187181F678AA8009A7419 /* lunicon.png */,
 				6B7DFF851F4D1801002CA103 /* LaunchScreen.storyboard */,
 				6B7DFF881F4D1801002CA103 /* Info.plist */,
 			);
@@ -455,9 +455,9 @@
 				6B8403A91F555E9100F6DAD0 /* WebViewController.xib in Resources */,
 				6B8E681B1F50167000187DBF /* MyMoneyViewController.xib in Resources */,
 				6B2BF0911F4EDB18008AE662 /* HUD_info@2x.png in Resources */,
-				6B86780B1F66788100ACE6C0 /* 1505116440.png in Resources */,
 				6B8E67F91F4FBE8600187DBF /* button_retry_up.png in Resources */,
 				6B8E68001F4FBE8600187DBF /* zftbg_country.mp3 in Resources */,
+				6BF187191F678AA8009A7419 /* lunicon.png in Resources */,
 				6B8E67FF1F4FBE8600187DBF /* starParticle.png in Resources */,
 				6B8E68041F4FBE8600187DBF /* zftkick.wav in Resources */,
 				6BA510791F4D1F320054ECA6 /* IMG_0504.JPG in Resources */,
